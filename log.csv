@@ -1,0 +1,212 @@
+5cb6f83,Tester,10 days ago,patch hideEverything when touch outside the box (means inside chat listview wrapper)
+3ff5cdc,Tester,10 days ago,patch recent chat time like LINE
+3bb8db0,Thananon Ngoenthaworn,12 days ago,finish spinner country code when search for phone number
+b454ea6,Thananon Ngoenthaworn,13 days ago,update See algorithm to trigger if the other actually see Update onClickListener on Activity > Tell friend button
+3fc412e,Thananon Ngoenthaworn,3 weeks ago,update notification badge count dynamically add support on colorful icon show for small screen chatactivity
+af1d447,Thananon Ngoenthaworn,3 weeks ago,finish profile title laew woi sadddddddddd
+28b0b11,Thananon Ngoenthaworn,3 weeks ago,added profile activity (whatsapp like) have problem with titlebar (wasted almost 2 hours with that stuff lolz)
+568578b,Thananon Ngoenthaworn,3 weeks ago,before add profile activity (whatsapp like)
+b35078f,Thananon Ngoenthaworn,3 weeks ago,finish refining homefragment (chat info) #, failed set autofocus to qrcode reader camera
+9451bba,Thananon Ngoenthaworn,3 weeks ago,finish refining homefragment (chat info), failed update badge in tablayout view
+cafb99b,Thananon Ngoenthaworn,3 weeks ago,grey out / remove on some menu and settings
+21ed861,Thananon Ngoenthaworn,3 weeks ago,try pushing possible ?
+f312e2d,Thananon Ngoenthaworn,3 weeks ago,Merge branch 'master' of ssh://bitbucket.org/candy-chat/wouchat-android
+dc6f40b,Thananon Ngoenthaworn,3 weeks ago,before
+d6c72ca,Tester,3 weeks ago,finish See message status
+24e6414,Tester,3 weeks ago,update search activity / data still wrong
+629870b,Tester,4 weeks ago,add google-service.json
+91b368a,Tester,4 weeks ago,merging
+cf576c1,Tester,4 weeks ago,merging
+44dc37c,Tester,4 weeks ago,before merge to master
+b62733d,Tester,4 weeks ago,before merge
+6e61e40,Tester,4 weeks ago,try fixing audio record
+b6ba4d6,Tester,4 weeks ago,fix notification api + show badge on recent chat fragment + add read / delete recent chat
+558c8f5,Tester,4 weeks ago,add external read/write permission on SD card for Samsung Gallaxy Tab 3
+2bf14db,Tester,4 weeks ago,fix chat item layout
+1aa038f,Tester,4 weeks ago,fix fb token failed when register with fb at first time (by request the same api again)
+3580873,Tester,4 weeks ago,finish sending progress for image picker and take photo, need some cosmetic
+7618ac6,Tester,4 weeks ago,disable proguard
+af81e4e,Tester,4 weeks ago,fix image select title (old chinese) + preparing msgobj and adapter to do progressbar msg item for photo
+6149abe,Tester,4 weeks ago,update today on date item (chat listview)
+99173b9,Tester,4 weeks ago,progress groupchat feature (is going to add multiple friend selector)
+f2af44d,Tester,4 weeks ago,Chat info for every entity
+966c42a,Tester,4 weeks ago,fix many glitches from k'art comment #2
+1f83cc5,Tester,4 weeks ago,fix many glitches from k'art comment #1
+587d716,Tester,4 weeks ago,remove multidex + some overload feature. add gcm support (now push ! and noti !)
+49a8c4a,Tester,5 weeks ago,rearrage git / files
+e57ff40,Tester,5 weeks ago,fix change wallpaper
+45dfefe,Tester,5 weeks ago,fix QR code add friend
+1b09527,Tester,5 weeks ago,fix crossing library class / service
+22d54f8,Tester,5 weeks ago,remove parse
+ce43472,Tester,5 weeks ago,555
+88860c5,Tester,5 weeks ago,555
+a31fa11,Tester,5 weeks ago,555
+1f117df,Tester,5 weeks ago,Complete new package name
+d565d54,Tester,5 weeks ago,before merge to master
+6deafe5,Tester,5 weeks ago,before merge to master
+e02f7ec,Tester,5 weeks ago,fix signup / login (again and again)
+9fe79a3,Tester,5 weeks ago, remove toolbar of QR code page
+5831180,Tester,5 weeks ago,Tons of เก็บรายละเอียด and register bugs (fixing again lolz)
+b2826e3,Tester,5 weeks ago,change some activity2 to supportActionBar (back as home) / update settings
+ab73774,Tester,5 weeks ago,add notification badge on main tabs (Friends,Recent chat)
+bb42984,Tester,5 weeks ago,fix all register processsssss
+22a4355,Tester,5 weeks ago,force logout if cannot get relationlist
+717fec4,Tester,5 weeks ago,PATCH REGISTER
+3cf3d9c,Tester,5 weeks ago,FIX REGISTER LAEW WOI
+da289bf,Tester,5 weeks ago,merged from bas change background
+558dcc0,Tester,5 weeks ago,Merged in chonlakant_sattaboot/wouchat-android-very-new/no-chat (pull request #3)
+0b893b6,Tester,5 weeks ago,before merge
+a43a0fa,Tester,5 weeks ago,fix content info event
+4cef6f6,Tester,5 weeks ago,before merge select background
+a14b1e2,chonlakant,5 weeks ago,เพิ่มActivity
+caebd30,chonlakant,5 weeks ago,แก้ไขToobar
+d60004b,chonlakant,5 weeks ago,เพิ่มหน้าChat Background
+dcd8590,Tester,5 weeks ago,Merge branch 'no-chat'
+c5c1864,Tester,5 weeks ago,add untracked file
+b823d7e,Tester,5 weeks ago,before merge to master
+431db3d,Tester,5 weeks ago,add workspace
+9320cb7,Tester,5 weeks ago,refactor little things
+110c917,Tester,5 weeks ago,add workspace
+6ed5670,Tester,5 weeks ago,beautify chat info #2
+6a7caf0,Tester,5 weeks ago,beautify chat info
+46fe714,Tester,5 weeks ago,unifinish update profile
+822659f,Tester,5 weeks ago,add no data for listview (RecentChat)
+86ad73a,Tester,5 weeks ago,beautify login flow
+b8526f4,Tester,5 weeks ago,แก้ menu ซ้ำ
+2b4ceee,Tester,5 weeks ago,add missing file from bas project
+d25496b,Tester,5 weeks ago,finish merge
+ff64c4b,chonlakant,5 weeks ago,eventfeed,event,model contenHistorychat
+2f4cd63,Tester,6 weeks ago,before merge 4
+2f7ca92,Tester,6 weeks ago,before merge 3
+c517977,Tester,6 weeks ago,before merge 2
+c3254f6,Tester,6 weeks ago,before merge with timeline and chat info feature
+d20169f,chonlakant,6 weeks ago,เพิ่ม chatInformation type vdo photo voice , เพอ่ม  Player Vdo
+0f27b87,Tester,6 weeks ago,no-chat branch
+7dbecb8,Tester,6 weeks ago,no chat branch
+6c489e6,Tester,6 weeks ago,add iml and build.gradle
+d375bc1,Tester,6 weeks ago,finish add chat module + add Multidex success
+d6b8b95,Tester,6 weeks ago,before import recent chat module on progress report #4
+2a419d4,Tester,6 weeks ago,test push slack
+e7b040e,Tester,6 weeks ago,add untracked file
+ac7ebd6,Tester,6 weeks ago,remove multidex / push code for next Feb's development
+2b5a78c,Tester,6 weeks ago,apply multidex / patch sms bug
+9412a5c,Tester,6 weeks ago,clear dex method
+7c03549,Tester,6 weeks ago,change all the activity / fragment structure / fix data bugs / add maintainability / 1 day before launch
+05f85bf,Tester,7 weeks ago,remove chat module for faster compile
+ee58535,Tester,7 weeks ago,2 days left
+ac2b128,Tester,7 weeks ago,finish data flow from friend list / recent chat to chat room completed !
+c8c3837,Tester,7 weeks ago,fix bugs
+d2990e1,Tester,7 weeks ago,fix tons of bugs in details
+b4a5863,Tester,7 weeks ago,add chat modules
+3bd9711,Tester,7 weeks ago,add custom font module
+f56e403,Tester,7 weeks ago,Merge branch 'dev'
+5edf282,Thananon Ngoenthaworn,10 weeks ago,Merged dev into master
+c494084,korrio,10 weeks ago,patch
+3811fd9,korrio,10 weeks ago,remove some unused library and refactor more code on AddFragment
+f6d3b9a,Thananon Ngoenthaworn,2 months ago,fix settings bug
+6845831,Thananon Ngoenthaworn,2 months ago,decoration and clean code
+8bb13b4,Thananon Ngoenthaworn,2 months ago,added material-camera lib and change SettingsActivity
+ecbde7c,Thananon Ngoenthaworn,2 months ago,before add camera
+a60a053,Thananon Ngoenthaworn,3 months ago,remove all unused module
+39b0a3c,Thananon Ngoenthaworn,3 months ago,remove ParseUI
+e7674a0,korrio,3 months ago,init
+c309dc9,korrio,3 months ago,git add -A
+1225b0f,chonlakant,3 months ago,before korr's fork
+2edcdbc,chonlakant,3 months ago,Add 'app/libraries/AgentSdk/' from commit '8a608c4793a8962a27fe6d5b7aaf758fbe6f323d'
+d411d56,chonlakant,3 months ago,แก้ไขHistoryChat
+abc972c,chonlakant,3 months ago,แก้ไขModule Chat
+8b9bddb,chonlakant,3 months ago,แก้ไขข้อความchat ให้อยู่ซ้ายและขวา
+d1da271,chonlakant,3 months ago,แก้ไขข้อความchat ให้อยู่ซ้ายและขวา
+3e301e2,chonlakant,3 months ago,แก้ไขModule chat
+53804e0,chonlakant,3 months ago,Create Group chat
+c3d98bf,chonlakant,3 months ago,แสดงรายชื่อหน้าContact list
+8aa1ff2,chonlakant,3 months ago,แก้ไขการแสดงผมหน้ารายชื่อเพื่อน
+77fe23c,chonlakant,3 months ago,แก้ไขการแสดงผมหน้ารายชื่อเพื่อน
+2f5fc35,chonlakant,3 months ago,แก้ไขLogin
+40f3f4f,chonlakant,3 months ago,เพิ่ม module chat
+6a91220,chonlakant,3 months ago,ลบ module chat
+896e4a0,chonlakant,3 months ago,เพิ่มModuleChat
+9063b7f,chonlakant,3 months ago,Create RQ code , Add Username
+890446c,chonlakant,3 months ago,Create RQ code , Add Username
+59beb58,chonlakant,3 months ago,ทำหน้าค้นหาเพื่อนด้วยUsername ได้แล้ว
+2695b64,chonlakant,3 months ago,เพิ่มProgressBar หน้าLogin , เปลี่ยนToast เปนSanck Bar หน้าLogin
+3a2ae3c,chonlakant,3 months ago,แก้ไขState Editext on and off
+9c803f3,chonlakant,3 months ago,แก้ไขLayout CreateGroup
+ec795ba,chonlakant,3 months ago,เพิ่มConverStaionId OneToOne
+1ad15bd,chonlakant,3 months ago,เพิ่มConverStaionId OneToOne
+c93f264,chonlakant,3 months ago,แก้ไขAPIหน้าFriendsList
+687394d,chonlakant,3 months ago,เพิ่มToolbarหน้าSettingActivity
+c289c30,korrio,3 months ago,Merge remote-tracking branch 'origin/develop' into develop
+5fb57a6,korrio,3 months ago,delete ChatUtil
+e49b554,chonlakant,3 months ago,Merge remote-tracking branch 'origin/develop' into develop
+c7ed9a9,chonlakant,3 months ago,Add toolbar setting
+c3374ef,korrio,3 months ago,edit ajax.php to request.php
+d3fbd4d,chonlakant,3 months ago,Merge remote-tracking branch 'origin/develop' into develop
+c7f2e4e,korrio,3 months ago,refactor code
+d3e7d09,chonlakant,3 months ago,test new branch
+e3e879f,chonlakant,3 months ago,Remove log and unused code
+02cdc41,chonlakant,3 months ago,Remove log and unused code
+d558f7a,chonlakant,3 months ago,new
+06fb644,chonlakant,3 months ago,new
+d448ba7,chonlakant,3 months ago,แก้ไข
+e064e84,chonlakant,3 months ago,แก้ไขชื่อ
+261e325,chonlakant,3 months ago,Add font
+cfbc266,chonlakant,3 months ago,new
+6b47b81,chonlakant,3 months ago,icon
+9dc2eb8,chonlakant,3 months ago,new
+02f5d90,chonlakant,3 months ago,first commit
+487dfd9,chonlakant,3 months ago,first commit
+7642f0b,korrio,3 months ago,review code
+36d64fe,korrio,3 months ago,edit gradle.build to android-23
+01ea984,korrio,3 months ago,edit gradle.build to android-23
+0140158,chonlakant,3 months ago,new
+f52398c,chonlakant,3 months ago,chat
+8d6a191,chonlakant,3 months ago,แก้ไขDesing
+a89a828,chonlakant,4 months ago,แก้ไขviewใหม่
+387aa15,chonlakant,4 months ago,new
+1c68790,chonlakant,4 months ago,new
+62fe1b1,chonlakant,4 months ago,new
+a73b82b,chonlakant,4 months ago,new
+b5b0cbf,chonlakant,4 months ago,new typeFace
+9a6a516,chonlakant,4 months ago,new
+b32b8c3,chonlakant,4 months ago,new
+ea2bb6e,chonlakant,4 months ago,new
+5e2041d,chonlakant,4 months ago,new
+ee5da93,chonlakant,4 months ago,new
+af7558f,chonlakant,4 months ago,new
+34accdf,chonlakant,4 months ago,new
+5a0a798,chonlakant,4 months ago,new
+b5b0c21,chonlakant,4 months ago,new
+6de7483,chonlakant,4 months ago,new
+7e68d25,chonlakant,4 months ago,new
+f2cb984,chonlakant,4 months ago,new
+6b82dfe,chonlakant,4 months ago,new
+9ee334d,chonlakant,4 months ago,update
+c44bd56,chonlakant,4 months ago,new
+900af6a,chonlakant,4 months ago,ใหม่
+7839a3f,chonlakant,4 months ago,new
+4ec3170,chonlakant,4 months ago,new
+8d01222,chonlakant,4 months ago,new
+a8a4ecf,chonlakant,4 months ago,new
+b5c60a9,chonlakant,5 months ago,new
+1f98108,chonlakant,5 months ago,Type json
+193e00d,chonlakant,5 months ago,new
+8a608c4,Teepluss,1 year, 1 month ago,update
+0b794e4,Teepluss,1 year, 1 month ago,fixed agent
+9995742,Teepluss,1 year, 1 month ago,fixed
+4734842,Teepluss,1 year, 6 months ago,agent
+7bf1f92,Teepluss,1 year, 6 months ago,update doc
+1505dc3,Teepluss,1 year, 6 months ago,update agent
+edbf858,Teepluss,1 year, 7 months ago,update doc
+fc4b605,Teepluss,1 year, 7 months ago,update agent
+ae29373,Teepluss,1 year, 7 months ago,o
+43b6eba,Teepluss,1 year, 7 months ago,ok
+d33dd61,Teepluss,1 year, 7 months ago,sdk
+96c088b,Teepluss,1 year, 7 months ago,update sdk
+7eb149c,Teepluss,1 year, 11 months ago,fix bug
+2f425e0,Teepluss,2 years, 1 month ago,Merge branch 'master' of bitbucket.org:teepluss/agent-payment-sdk
+370eca4,Teepluss,2 years, 1 month ago,update
+65827f8,Teepluss,2 years, 1 month ago,change
+59c9db3,Teepluss,2 years, 1 month ago,add sandbox
+d385ffc,Teepluss,2 years, 1 month ago,sandbox param
+c816629,Teepluss,2 years, 1 month ago,new version

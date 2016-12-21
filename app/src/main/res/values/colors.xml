@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0081B3</color>
+    <color name="primary_dark">#0081B3</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="font">#0fa9e0</color>
+
+    <color name="colorPrimary">#0081B3</color>
+    <color name="colorPrimaryTransparent">#335f50e1</color>
+    <color name="colorPrimaryDark">#0081B3</color>
+    <color name="colorAccent">#BBDEFB</color>
+    <color name="colorTitleText">#FFFFFF</color>
+
+
+    <color name="primaryDark">#303f9f</color>
+    <color name="accent">#448AFF</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+
+
+    <color name="text_primary_light">#FFFFFF</color>
+    <color name="text_secondary_light">#AAAAAA</color>
+    <!-- color textview -->
+    <color name="color_text">#2582b1</color>
+
+    <color name="material_drawer_dark_hint_text">#252525</color>
+    <!-- Material DEFAULT text / items colors -->
+    <color name="material_drawer_icons">#F9F9F9</color>
+    <color name="material_drawer_primary_text">#212121</color>
+    <color name="material_drawer_secondary_text">#727272</color>
+    <color name="material_drawer_hint_text">#B8B8B8</color>
+    <color name="material_drawer_divider">#B6B6B6</color>
+
+    <color name="white">@android:color/white</color>
+    <color name="chat_user_reply_background_color">#c8f0ff</color>
+    <color name="chat_company_reply_background_color">#F5F5F5</color>
+    <color name="gray">@android:color/darker_gray</color>
+
+    <color name="orange">@android:color/holo_blue_light</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="btn_default_light_normal">#00000000</color>
+    <color name="btn_default_light_pressed">#40ffffff</color>
+
+</resources>

@@ -1,0 +1,51 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.xw.repo.xedittext.XEditText
+                        android:id="@+id/ios_style_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/shape_corner_gray_bg"
+                        android:drawableLeft="@drawable/icon_search"
+                        android:drawablePadding="5dp"
+                        android:hint="search"
+                        android:padding="5dp"
+                        app:x_iOSStyleEnable="true"/>
+                </LinearLayout>
+
+                <ExpandableListView
+                    android:id="@+id/expand"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:groupIndicator="@null"></ExpandableListView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

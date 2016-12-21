@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:autolabel="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ChatActivity"
+                android:animateLayoutChanges="true">
+
+    <include layout="@layout/inc_toolbar" />
+
+    <!--<com.dpizarro.autolabel.library.AutoLabelUI-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/label_view"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--autolabel:max_labels="10"-->
+        <!--autolabel:show_cross="true"-->
+        <!--autolabel:text_color="@android:color/white"-->
+        <!--autolabel:text_size="@dimen/label_title_size"-->
+        <!--autolabel:icon_cross="@drawable/cross"-->
+        <!--autolabel:label_background_res="@color/primary"-->
+        <!--autolabel:label_clickable="true"/>-->
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/invite_fragment"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Invite to Group"
+            android:id="@+id/ok" />
+    </LinearLayout>
+
+</LinearLayout>

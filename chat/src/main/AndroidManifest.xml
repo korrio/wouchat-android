@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.module.candychat.net">
+
+    <permission
+        android:name="com.module.candychat.net.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.module.candychat.net.permission.MAPS_RECEIVE"/>
+
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="co.moonmonkeylabs.realmsearchview.ui.RealmSearchActivity" />
+
+        <!--<activity-->
+            <!--android:name="com.afollestad.materialcamera.CaptureActivity"-->
+            <!--android:theme="@style/MaterialCamera.CaptureActivity" />-->
+        <!--<activity-->
+            <!--android:name="com.afollestad.materialcamera.CaptureActivity2"-->
+            <!--android:theme="@style/MaterialCamera.CaptureActivity" />-->
+
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:label="Upload pictures"/>
+
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name=".activity.SelectPhotosActivity"
+            android:label="Upload photos"/>
+
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name=".activity.SampleGridViewActivity"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBzsVXh2boH8_fZzMv5FVJXWCfNChJsy44"/>
+
+        <activity android:name=".ChatActivity"
+
+            />
+        <activity android:name=".activity.VideoActivity" />
+        <activity android:name=".activity.ContactPickerActivity" />
+        <activity android:name=".activity.InviteActivity" />
+        <activity android:name=".activity.VoiceActivity" />
+
+        <activity
+            android:name=".activity.PictureActivity"
+            android:launchMode="singleTask"/>
+
+        <service
+            android:name="com.module.candychat.net.service.FetchAddressIntentService"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activity.ChatWallpaperActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+
+        </activity>
+
+        <activity android:name=".activity.LanguageSettingsActivity"/>
+
+        <activity android:name=".activity.CreateTopicActivity"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+    <item
+        android:id="@+id/Gallery"
+        android:orderInCategory="100"
+        android:title="Save to Gallery"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Email"
+        android:icon="@drawable/user"
+        android:orderInCategory="100"
+        android:title="Send Email"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Chat"
+        android:orderInCategory="100"
+        android:title="Share to Chat"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/Other"
+        android:orderInCategory="100"
+        android:title="Other"
+        app:showAsAction="never" />
+
+    <!--<item-->
+        <!--android:id="@+id/Generate_qr"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="Generate my new QR code"-->
+        <!--app:showAsAction="never" />-->
+
+
+</menu>

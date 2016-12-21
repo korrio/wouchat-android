@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<include layout="@layout/inc_toolbar" />-->
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:id="@+id/avatar"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:visibility="visible"
+                            android:layout_gravity="center"/>
+
+                        <ImageView
+                            android:id="@+id/avatar_camera"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="40dp"
+                            android:src="@drawable/ic_tabbar_photo"
+                            android:layout_marginTop="-24dp"
+                            android:background="@drawable/circular_shape"
+                            android:padding="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <Button
+                                    android:id="@+id/show_qr_code"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/btn"
+                                    android:textStyle="bold"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text="QR code"
+                                    android:textColor="#5db2d6"
+                                    android:textSize="18dp"
+                                    android:drawableLeft="@drawable/ic_add_friend_qrcode"
+                                    android:padding="5dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginRight="5dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/btn"
+                                    android:layout_weight="1">
+                                    <ImageView
+                                        android:id="@+id/image_hone_timeline"
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
+                                        android:src="@drawable/ic_home_small"
+                                        android:layout_marginTop="6dp"/>
+
+                                    <com.candychat.net.view.MyCustomTextView
+                                        android:id="@+id/textView18"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Home"
+
+                                        android:drawablePadding="6dp"
+                                        android:textColor="@color/font"
+
+                                        android:layout_gravity="center"
+                                        android:visibility="visible"
+                                        android:paddingLeft="6dp"
+                                        android:textSize="18dp"
+                                        android:gravity="center"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--<natuan.org.androiddesigntablayout.MyCustomTextView-->
+                <!--android:id="@+id/nameTv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:text="My profile"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                <!--android:textColor="@color/font" />-->
+
+                <Button
+                    android:id="@+id/btn_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/btn"
+                    android:drawableLeft="@drawable/home"
+                    android:drawablePadding="3dp"
+                    android:text="Home"
+                    android:textColor="@color/font"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="24dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/name_box">
+
+                        <com.candychat.net.view.MyCustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@null"
+                            android:hint="Display name"
+
+                            android:inputType="text"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColorHint="@color/font" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/input_name"
+                                android:layout_width="180dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="left"
+                                android:background="@null"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:hint="ex. Cool Name"
+                                android:textSize="24dp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#999" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/status_box">
+
+                        <com.candychat.net.view.MyCustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@null"
+                            android:hint="Status"
+                            android:inputType="text"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColorHint="@color/font" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/input_status"
+                                android:layout_width="180dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="left|right"
+                                android:background="@null"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:hint="ex. Available"
+                                android:textSize="24dp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#999" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/username_box">
+
+                        <com.candychat.net.view.MyCustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@null"
+                            android:hint="Username"
+                            android:inputType="text"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColorHint="@color/font" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/input_username"
+                                android:layout_width="180dp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="left"
+                                android:background="@null"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:hint="ex. username01"
+                                android:textSize="24dp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#999" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="People can add you as a friend by searching for username"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="normal"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.candychat.net.view.MyCustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:background="@null"
+                            android:hint="Phone"
+                            android:inputType="text"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColorHint="@color/font" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/input_phone"
+                                android:layout_width="180dp"
+                                android:layout_height="36dp"
+                                android:background="@null"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:hint="ex. 0123456789"
+                                android:visibility="gone"
+                                android:layout_gravity="left"/>
+
+                            <Button
+                                android:id="@+id/verify_phone_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/btn"
+                                android:textStyle="bold"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Verify Phone Number"
+                                android:textColor="#5db2d6"
+                                android:textSize="18dp"
+                                android:drawableLeft="@drawable/phone"
+                                android:padding="5dp"
+                                android:layout_marginBottom="15dp" />
+
+                            <!--<com.digits.sdk.android.DigitsAuthButton-->
+                                <!--android:id="@+id/verify_phone_button"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_gravity="center_horizontal"-->
+                                <!--android:text="Verify phone number"-->
+                                <!--style="CustomDigitsTheme"-->
+                                <!--android:background="#0081B3"-->
+                                <!--android:visibility="gone"-->
+                                <!--android:layout_margin="6dp" />-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#999" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="People can add you as a friend by searching for phone number"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.candychat.net.view.MyCustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:hint="My QR Code"
+                        android:inputType="text"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColorHint="@color/font" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#999" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.candychat.net.view.MyCustomTextView
+                            android:id="@+id/txt_qr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Show my profile picture changing"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_gravity="center_vertical" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/checkBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/img_qr_code"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <com.candychat.net.view.MyCustomTextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/font"
+                android:background="@drawable/btn"
+                android:text="Save"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

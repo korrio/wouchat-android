@@ -1,0 +1,42 @@
+ext {
+    appCompatVersion = "23.1.1"
+    buildToolsVersion = "23.0.3"
+    targetSdk = 23
+    compileSdk = 23
+    minSdk = 16
+    compileSdkVersion = 23
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://repos.zeroturnaround.com/nexus/content/repositories/zt-public-releases'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.google.gms:google-services:2.0.0-alpha3'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+        //classpath "io.realm:realm-gradle-plugin:0.88.3"
+        classpath "io.realm:realm-gradle-plugin:0.90.0"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "http://dl.bintray.com/dasar/maven" }
+        maven { url 'http://dl.bintray.com/amulyakhare/maven' }
+        maven { url 'https://dl.bintray.com/alexeydanilov/maven' }
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+
+    }
+}
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}

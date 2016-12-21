@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#0081B3"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.module.candychat.net.widgets.MyCustomTextView
+                android:id="@+id/txt_take_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_photo_att_chat"
+                android:gravity="center"
+                android:text="Take photo"
+                android:textColor="#fff"
+                android:textSize="12dp"  />
+
+
+            <com.module.candychat.net.widgets.MyCustomTextView
+                android:id="@+id/txt_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_video"
+                android:gravity="center"
+                android:text="Video"
+                android:textColor="#fff"
+                android:textSize="12dp"  />
+
+
+            <com.module.candychat.net.widgets.MyCustomTextView
+                android:id="@+id/txt_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_vo"
+                android:gravity="center"
+                android:text="Voice"
+                android:textColor="#fff"
+                android:textSize="12dp"  />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.module.candychat.net.widgets.MyCustomTextView
+                android:id="@+id/txt_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_ga"
+                android:gravity="center"
+                android:text="Photo gallery"
+                android:textColor="#fff"
+                android:textSize="10dp" />
+
+
+            <com.module.candychat.net.widgets.MyCustomTextView
+                android:id="@+id/txt_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_locat"
+                android:gravity="center"
+                android:text="Location"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+
+            <com.module.candychat.net.widgets.MyCustomTextView
+                android:id="@+id/txt_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_con"
+                android:gravity="center"
+                android:text="Contact"
+                android:textColor="#fff"
+                android:textSize="12dp"
+                android:layout_marginBottom="10dp"
+                />
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<bentaang.chonlakant.com.drawer.widgets.MyCustomTextView-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:drawableTop="@drawable/ic_do"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Put doodle"-->
+                <!--android:textColor="#fff"-->
+                <!--android:textSize="15dp" />-->
+
+            <!--<bentaang.chonlakant.com.drawer.widgets.MyCustomTextView-->
+
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/test"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Location"-->
+                <!--android:textColor="#0081B3"-->
+                <!--android:textSize="15dp" />-->
+            <!--<bentaang.chonlakant.com.drawer.widgets.MyCustomTextView-->
+
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/test"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="#fff"-->
+                <!--android:textSize="15dp" />-->
+
+        <!--</LinearLayout>-->
+
+
+    </LinearLayout>
+
+</LinearLayout>

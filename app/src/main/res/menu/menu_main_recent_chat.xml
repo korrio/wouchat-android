@@ -1,0 +1,44 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+    <item
+        android:id="@+id/action_new_group"
+        android:icon="@drawable/ic_chat_colse"
+        android:orderInCategory="100"
+        android:title="New Group"
+        app:showAsAction="ifRoom"
+        android:visible="false" />
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_more_search_invite"
+        android:orderInCategory="100"
+        android:title=""
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_order"
+        android:orderInCategory="100"
+        android:title="Order by "
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_new_group2"
+        android:icon="@drawable/user"
+        android:orderInCategory="100"
+        android:title="New Group"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_send_multi"
+        android:orderInCategory="100"
+        android:title="Send multi chats"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/Settings"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="never" />
+
+
+</menu>

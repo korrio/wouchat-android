@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:autolabel="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:background="#fff"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    tools:context=".MainChatActivity"
+    android:animateLayoutChanges="true">
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_horizontal">
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search by name"
+            android:padding="0dp"
+            android:background="@drawable/edit_text"
+            android:drawableLeft="@drawable/ic_search_icon_grey"
+            android:id="@+id/editText"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+
+    <com.dpizarro.autolabel.library.AutoLabelUI
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_view"
+        android:layout_marginBottom="10dp"
+        autolabel:max_labels="10"
+        autolabel:show_cross="true"
+        autolabel:text_color="@android:color/white"
+        autolabel:text_size="@dimen/label_title_size"
+        autolabel:icon_cross="@drawable/cross"
+        autolabel:label_background_res="@color/primary"
+        autolabel:label_clickable="true"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

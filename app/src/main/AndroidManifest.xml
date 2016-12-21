@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wouchat.messenger">
+
+    <uses-feature android:name="android.hardware.camera"></uses-feature>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true"></uses-feature>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.wouchat.messenger.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.candychat.net.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name="com.candychat.net.WOUApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/client_token" />
+
+        <activity
+            android:name="com.facebook.accountkit.ui.AccountKitActivity"
+            android:theme="@style/AppLoginTheme"
+            tools:replace="android:theme"/>
+
+        <activity
+            android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@style/FinestWebViewTheme.Light" />
+
+        <activity
+            android:name="com.candychat.net.alogin.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.candychat.net.alogin.activity.LoginOrSignupActivity" />
+        <activity android:name="com.candychat.net.activity.DecoderActivity" />
+        <activity android:name="com.candychat.net.activity2.DecoderAdvancedActivity" />
+        <activity android:name="com.candychat.net.activity2.InviteActivity" />
+        <activity android:name="com.candychat.net.activity.MainActivity" />
+        <!-- <activity android:name=".MainActivityChat" /> -->
+        <activity android:name="com.candychat.net.activity.ShareActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- <data android:mimeType="application/*" /> -->
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="image/*" />
+                <data android:mimeType="message/*" />
+                <!-- <data android:mimeType="multipart/*" /> -->
+                <data android:mimeType="text/*" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.candychat.net.activity.SharePhotoActivity"></activity>
+        <activity android:name="com.candychat.net.alogin.activity.MainLoginActivity" />
+        <activity android:name="com.candychat.net.activity.ChatSettingsActivity" />
+        <activity android:name="com.candychat.net.activity.timeline.MainHomeGroupActivity" />
+        <activity android:name="com.candychat.net.activity.StickerDetailActivity" />
+        <activity android:name="com.candychat.net.activity.SettingsActivity" />
+        <activity android:name="com.candychat.net.activity.LanguageSettingActivity">
+            <intent-filter>
+                <action android:name=".activity.ActivityLanguageSetting" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.candychat.net.activity.ChatActivity" />
+        <activity android:name="com.module.candychat.net.activity.ChatWallpaperActivity" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="897fb052ba756d2fc5b35ecd54a942283239f5d8" />
+
+        <!-- <activity -->
+        <!-- android:name="com.afollestad.materialcamera.CaptureActivity" -->
+        <!-- android:theme="@style/MaterialCamera.CaptureActivity" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.afollestad.materialcamera.CaptureActivity2" -->
+        <!-- android:theme="@style/MaterialCamera.CaptureActivity" /> -->
+
+
+        <!-- <activity android:name="me.iwf.photopicker.PhotoPickerActivity" -->
+        <!-- android:theme="@style/Theme.AppCompat.NoActionBar" -->
+        <!-- /> -->
+
+
+        <!-- <activity android:name="me.iwf.photopicker.PhotoPagerActivity" -->
+        <!-- android:theme="@style/Theme.AppCompat.NoActionBar"/> -->
+
+        <activity android:name="com.candychat.net.activity.VideoCacheActivity" />
+        <activity android:name="com.candychat.net.activity2.UpdateStatusActivity" />
+        <activity
+            android:name="com.candychat.net.activity.search.SearchActivity"
+            android:theme="@style/AppThemeHasToolbar" />
+        <activity
+            android:name="com.candychat.net.activity.timeline.ChatInfoActivity"
+            android:theme="@style/AppThemeHasToolbar" />
+
+        <activity
+            android:name="com.candychat.net.activity.timeline.MediaActivity"
+            android:theme="@style/AppThemeHasToolbar" />
+
+        <activity
+            android:name="com.candychat.net.activity2.AddActivity"
+            android:theme="@style/AppThemeHasToolbar" />
+        <activity
+            android:name="com.candychat.net.activity2.CreateGroupActivity"
+            android:theme="@style/AppThemeHasToolbar" />
+
+        <activity
+            android:name="com.candychat.net.activity2.CreateBroadcastActivity"
+            android:theme="@style/AppThemeHasToolbar" />
+
+        <activity
+            android:name="com.candychat.net.activity.MainSettingActivity"
+            android:theme="@style/AppThemeHasToolbar" />
+        <activity
+            android:name="com.candychat.net.activity2.UpdateProfileActivity"
+            android:theme="@style/AppThemeHasToolbar" />
+
+        <activity
+            android:name="com.candychat.net.activity2.UpdateProfileActivity2"
+            android:theme="@style/AppThemeHasToolbar" />
+
+        <activity
+            android:name="com.candychat.net.activity.profile.ProfileActivity"
+            android:label="WOUchat Profile"
+            android:theme="@style/AppTheme.NoActionBarWOU" />
+        <activity
+            android:name="com.candychat.net.activity.profile.ProfileActivityNew"
+            android:label="WOUchat Profile"
+            android:theme="@style/AppTheme.NoActionBarWOU" />
+        <activity android:name="com.candychat.net.activity2.AboutActivity" />
+        <activity android:name="com.candychat.net.widget.CropActivity" />
+        <activity android:name="com.candychat.net.widget.ResultActivity" />
+        <activity
+            android:name="com.candychat.net.activity2.ShowQRCodeActivity"
+            android:theme="@style/AppThemeHasToolbar" />
+        <activity
+            android:name="com.candychat.net.activity2.FindFriendsByPhoneActivity"
+            android:theme="@style/AppThemeHasToolbar" />
+        <activity
+            android:name="com.candychat.net.activity2.FindFriendsByUsernameActivity"
+            android:theme="@style/AppThemeHasToolbar" />
+        <activity android:name="com.candychat.net.alogin.activity.RegistrationCompleteActivity" />
+       <activity android:name="co.moonmonkeylabs.realmsearchview.ui.RealmSearchActivity" />
+
+
+        <activity android:name="com.candychat.net.activity2.TopicContactActivity"
+            android:theme="@style/AppThemeHasToolbar"/>
+
+        <activity android:name="com.candychat.net.activity2.TopicGroupActivity"
+            android:theme="@style/AppThemeHasToolbar"/>
+
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBzsVXh2boH8_fZzMv5FVJXWCfNChJsy44" />
+
+        <service
+            android:name="com.module.candychat.net.service.FetchAddressIntentService"
+            android:exported="false" />
+
+        <!-- START Added for GCM -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.candychat.messenger" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.candychat.net.gcm.MyGcmPushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.candychat.net.gcm.GcmIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <!-- END Added for GCM -->
+
+        <receiver
+            android:name="com.candychat.net.MyReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.candychat.net.BroadcastReceiver" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>

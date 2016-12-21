@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    tools:ignore="MergeRootFrame">
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_chat" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="-6dp">
+
+            <RelativeLayout
+                android:id="@+id/colorful_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#cccccc"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <include layout="@layout/custom_layout_font" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/attachment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#cccccc"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <include layout="@layout/item_attachment" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_4"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/imageView" />
+
+                <ListView
+                    android:id="@+id/chat_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="64dp"
+                    android:divider="@null"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:visibility="visible"
+                    android:layout_marginTop="0dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:id="@+id/chat_box_wrapper"
+            android:minHeight="56dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    android:layout_marginLeft="6dp">
+
+                    <Button
+                        android:id="@+id/btn_sticker"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/ic_chat_pop_contact"
+                        android:onClick="showFace" />
+
+                    <com.module.candychat.net.view.CustomEditTextOriginal
+                        android:id="@+id/chat_edit_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="0dp"
+
+                        android:layout_toEndOf="@id/btn_sticker"
+                        android:layout_toLeftOf="@+id/enter_chat1"
+                        android:layout_toRightOf="@id/btn_sticker"
+                        android:layout_toStartOf="@+id/enter_chat1"
+                        android:layout_weight="1"
+                        android:inputType="textMultiLine"
+                        android:maxLines="5"
+                        android:lines="5"
+                        android:paddingLeft="4dp"
+                        android:scrollHorizontally="false"
+                        android:singleLine="false"
+                        android:textSize="18sp"
+                        android:minHeight="52dp"
+                        android:maxHeight="58dp"
+                        android:background="@null" />
+
+                    <com.module.candychat.net.view.AudioRecorderButton
+                        android:id="@+id/id_recorder_button"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="6dp"
+                        android:background="@drawable/ic_info_voice_icon">
+
+                    </com.module.candychat.net.view.AudioRecorderButton>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/enter_camera"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignBottom="@id/chat_edit_text1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/ic_photo_keyboard"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/enter_chat1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignBottom="@id/chat_edit_text1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/send_text_keyboard_icon"
+                    android:visibility="visible"
+                    android:layout_marginRight="4dp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#AAAAAA"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/holder"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <include layout="@layout/fragment_sticker_pager"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

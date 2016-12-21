@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@drawable/rounded_footer"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/txtChat"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="@color/primary"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_marginBottom="3dp"
+            android:drawableTop="@drawable/ic_profile_pop_contact"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_activities_add"
+            android:id="@+id/btn_add_friend"
+            android:text="Add friend"
+            android:textSize="12dp"
+            android:layout_marginBottom="3dp"
+            android:textColor="@color/primary"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:contextClickable="true"/>
+
+        <TextView
+            android:text="Home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vdoChat"
+            android:textSize="12dp"
+            android:textColor="@color/primary"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginBottom="3dp"
+            android:drawableTop="@drawable/ic_home_pop_contact"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="font_en">
+        <item>DEFAULT</item>
+        <item>AlexBrush-Regular</item>
+        <item>Amadeus</item>
+        <item>BlackJack</item>
+        <item>ComicaBD</item>
+        <item>DancingScriptOT</item>
+        <item>FFFTusj-Bold</item>
+        <item>GrandHotel-Regular</item>
+        <item>KaushanScript-Regular</item>
+        <item>LobsterTwo</item>
+        <item>MountainsofChristmas-Regular</item>
+        <item>Pacifico</item>
+        <item>Sniglet</item>
+        <item>Sofia</item>
+        <item>VeggieBurger</item>
+    </array>
+
+    <array name="font_th">
+        <item>DEFAULT</item>
+        <item>4803_Kwang_MD</item>
+        <item>4809KwangMD_Glory</item>
+        <item>5011_thE_Little_Uki_noworry</item>
+        <item>AH_LuGDeK</item>
+        <item>Anchan</item>
+        <item>can_Rukdeaw</item>
+        <item>CSCheangkhan</item>
+        <item>DRjoyful</item>
+        <item>FontNongnam-Bold</item>
+        <item>Kanyanut-uni</item>
+        <item>kt_smarn_piyatida</item>
+        <item>kt_smarn_saiparn</item>
+        <item>ktsmarnseesan</item>
+        <item>LayijiMaHaNiYomBAO1.2</item>
+        <item>LayijiSarangheyo</item>
+        <item>LIPGOZFONT-Lekzii</item>
+        <item>LIPGOZLITTEL</item>
+        <item>LIPGOZFONT-nongLek</item>
+        <item>Little_Star</item>
+        <item>LittleStar0506</item>
+        <item>NPNaipolTemplate</item>
+        <item>PeachTV</item>
+        <item>TheLazyKillerBack2Campus</item>
+        <item>WaffleRegular</item>
+    </array>
+
+    <array name="names">
+        <item>David Pizarro</item>
+        <item>Manuel García Varés</item>
+        <item>Eduardo Centeno</item>
+        <item>Tylos</item>
+        <item>Elisa Pastor</item>
+        <item>Lurecas</item>
+        <item>Carlos Romero</item>
+        <item>JAMM</item>
+        <item>Juan Carlos Domínguez</item>
+        <item>Pablo Domínguez</item>
+    </array>
+    <array name="ages">
+        <item>26 years old</item>
+        <item>32 years old</item>
+        <item>28 years old</item>
+        <item>26 years old</item>
+        <item>33 years old</item>
+        <item>26 years old</item>
+        <item>41 years old</item>
+        <item>∞ years old</item>
+        <item>26 years old</item>
+        <item>26 years old</item>
+    </array>
+    <string-array name="photos">
+        <item>@drawable/pizarro</item>
+        <item>@drawable/manu</item>
+        <item>@drawable/edu</item>
+        <item>@drawable/tylos</item>
+        <item>@drawable/elisa</item>
+        <item>@drawable/lurecas</item>
+        <item>@drawable/romero</item>
+        <item>@drawable/jamm</item>
+        <item>@drawable/juanqui</item>
+        <item>@drawable/pablo</item>
+    </string-array>
+
+    <string-array name="entries_list_preference">
+        <item>on</item>
+        <item>off</item>
+    </string-array>
+
+    <string-array name="entryvalues_list_preference">
+        <item>Alpha</item>
+        <item>Beta</item>
+        <item>Charlie</item>
+    </string-array>
+
+    <string-array name="textface">
+        <item>( ͡° ͜ʖ ͡°)</item>
+
+        <item>(ง ͠° ͟ل͜ ͡°)ง</item>
+
+        <item>( ͡ᵔ ͜ʖ ͡ᵔ )</item>
+
+        <item>ʕ•ᴥ•ʔ</item>
+
+        <item>(ಥ﹏ಥ)</item>
+
+        <item>(ง°ل͜°)ง</item>
+
+        <item>ᕦ(ò_óˇ)ᕤ</item>
+
+        <item>┌( ಠ_ಠ)┘</item>
+
+        <item>(ಠ_ಠ)</item>
+
+        <item>(ಥ_ಥ)</item>
+
+        <item>ب_ب</item>
+
+        <item>ಠoಠ</item>
+
+        <item>(⊙ヮ⊙)</item>
+
+        <item>(✿｡✿)</item>
+
+        <item>⊙﹏⊙</item>
+
+        <item>◉◡◉</item>
+
+        <item>◉_◉</item>
+
+        <item>⊙︿⊙</item>
+
+        <item>♥‿♥</item>
+
+        <item>ಠ▃ಠ</item>
+
+        <item>( ･_･)♡</item>
+
+        <item>( ﾟヮﾟ</item>
+
+        <item>(¬‿¬)</item>
+
+        <item>(╥_╥)</item>
+
+        <item>(◕‿◕)</item>
+    </string-array>
+</resources>

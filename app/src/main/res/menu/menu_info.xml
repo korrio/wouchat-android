@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_noti"
+        android:icon="@drawable/ic_nav_bar_notification_icon"
+        android:orderInCategory="101"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_set_public"
+        android:title="Set public"
+        android:orderInCategory="102"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_set_private"
+        android:title="Set private"
+        android:orderInCategory="103"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_set_onlyme"
+        android:orderInCategory="104"
+        android:title="Set only me"
+        app:showAsAction="never" />
+
+
+</menu>
