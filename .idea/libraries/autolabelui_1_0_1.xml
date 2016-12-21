@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="autolabelui-1.0.1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.davidpizarro/autolabelui/1.0.1/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.davidpizarro/autolabelui/1.0.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.davidpizarro/autolabelui/1.0.1/d08c7a6c00bdbfb793bded9a0acfee76b0eccd84/autolabelui-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

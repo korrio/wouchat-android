@@ -3,8 +3,7 @@
     android:id="@+id/splashLinLay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3daae2"
-    >
+    android:background="#3daae2">
 
     <ImageView
         android:layout_width="fill_parent"

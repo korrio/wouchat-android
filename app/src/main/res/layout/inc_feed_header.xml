@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:gravity="top"
@@ -61,7 +60,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#9497A3"
         android:textSize="@dimen/size_text_icon"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
 
     <com.candychat.net.view.MyCustomTextView
@@ -76,7 +75,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#9497A3"
         android:textSize="@dimen/size_text_icon"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <com.candychat.net.view.MyCustomTextView
         android:id="@+id/number3"
@@ -89,6 +88,6 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#9497A3"
         android:textSize="@dimen/size_text_icon"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
 </LinearLayout>

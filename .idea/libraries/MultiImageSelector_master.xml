@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="MultiImageSelector-master">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.lovetuzitong/MultiImageSelector/master/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.lovetuzitong/MultiImageSelector/master/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

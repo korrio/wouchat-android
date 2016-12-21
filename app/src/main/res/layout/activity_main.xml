@@ -27,20 +27,22 @@
             android:orientation="vertical">
 
 
-
             <FrameLayout
                 android:id="@+id/flContainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true">
+
                 <FrameLayout
                     android:id="@+id/flContainerSub"
                     android:layout_width="match_parent"
-                    android:layout_height="457dp"/>
+                    android:layout_height="457dp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <com.candychat.net.view.CustomViewPager
                         android:layout_weight="1"
                         android:id="@+id/viewpager"
@@ -56,7 +58,7 @@
                         <View
                             android:background="#e6e5e8"
                             android:layout_width="match_parent"
-                            android:layout_height="2dp"/>
+                            android:layout_height="2dp" />
 
                         <android.support.design.widget.TabLayout
                             android:layout_weight="1"

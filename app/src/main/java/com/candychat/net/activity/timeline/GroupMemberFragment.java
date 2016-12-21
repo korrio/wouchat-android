@@ -1,7 +1,6 @@
 package com.candychat.net.activity.timeline;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,23 +20,17 @@ import com.androidquery.AQuery;
 import com.androidquery.callback.AjaxCallback;
 import com.androidquery.callback.AjaxStatus;
 import com.candychat.net.WOUApp;
-import com.candychat.net.activity.ChatActivity;
 import com.candychat.net.activity.main.event.GetRelationDataEvent;
-import com.candychat.net.adapter.ExpandableListViewAdapter;
 import com.candychat.net.adapter.MemberGroupAdapter;
 import com.candychat.net.base.BaseFragment;
 import com.candychat.net.event.AddUserEventSuccess;
 import com.candychat.net.event.ContentInfoEvent;
-import com.candychat.net.event.GetRoomChatEvent;
 import com.candychat.net.handler.ApiBus;
 import com.candychat.net.manager.PrefManager;
 import com.candychat.net.view.RoundedTransformation;
-import com.candychat.net.woumodel.Relations;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.module.candychat.net.event.ChatInfo;
-import com.module.candychat.net.event.GetChatInfoSuccess;
-import com.module.candychat.net.model.RelationsGroup;
+import com.module.candychat.net.model.Relations;
 import com.squareup.otto.Subscribe;
 import com.squareup.picasso.Picasso;
 import com.wouchat.messenger.R;
@@ -46,7 +39,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
@@ -164,7 +156,7 @@ public class GroupMemberFragment extends BaseFragment {
         if (json != null) {
             Gson gson = new GsonBuilder().create();
             relations = gson.fromJson(json.toString(), Relations.class);// obj is your object
-            final ArrayList<Relations.GroupEntity.ConversationMembersEntity> groupList = new ArrayList<>();
+            final ArrayList<Relations.GroupBean.ConversationMembersBean> groupList = new ArrayList<>();
             for (int i = 0; i < relations.getGroup().size(); i++) {
                 groupList.add(relations.getGroup().get(position).getConversationMembers().get(i));
 

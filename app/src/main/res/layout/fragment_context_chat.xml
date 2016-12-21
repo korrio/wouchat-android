@@ -12,13 +12,13 @@
         <include layout="@layout/inc_toolbar" />
     </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        </LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>

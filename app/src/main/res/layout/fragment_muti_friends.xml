@@ -18,7 +18,7 @@
         autolabel:text_size="@dimen/label_title_size"
         autolabel:icon_cross="@drawable/cross"
         autolabel:label_background_res="@color/primary"
-        autolabel:label_clickable="true"/>
+        autolabel:label_clickable="true" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"

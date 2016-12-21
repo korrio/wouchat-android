@@ -7,11 +7,11 @@
     android:orientation="vertical">
 
     <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="vertical">-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
 
-        <!--<include layout="@layout/inc_toolbar" />-->
+    <!--<include layout="@layout/inc_toolbar" />-->
     <!--</LinearLayout>-->
 
     <LinearLayout
@@ -120,14 +120,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="Create a group"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/ColPhoneNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:text="Create a group with friends"/>
+                        android:text="Create a group with friends" />
 
 
                 </LinearLayout>
@@ -153,9 +153,10 @@
                 android:layout_height="25dp"
                 android:layout_marginRight="5dp"
                 android:src="@drawable/ic_arrow_more"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center" />
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
@@ -166,8 +167,7 @@
             android:id="@+id/official_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <com.candychat.net.view.MyCustomTextView
                 android:visibility="gone"
@@ -206,15 +206,13 @@
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
             android:layout_marginTop="0.1sp"
-            android:background="#bfbfbf"
-            />
+            android:background="#bfbfbf" />
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
 
             <ExpandableListView
@@ -239,8 +237,7 @@
         android:layout_marginTop="-2dp"
         android:id="@+id/suggestion_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <com.candychat.net.view.MyCustomTextView
             android:visibility="gone"

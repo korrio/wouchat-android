@@ -64,14 +64,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop" />
 
         <ImageView
             android:id="@+id/overlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:scaleType="centerInside"/>
+            android:scaleType="centerInside" />
 
 
         <RelativeLayout
@@ -108,7 +108,7 @@
             android:id="@+id/imageView10"
             android:src="@drawable/ic_play"
             android:layout_centerInParent="true"
-            android:background="@color/transparent"/>
+            android:background="@color/transparent" />
 
     </RelativeLayout>
 

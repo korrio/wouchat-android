@@ -13,7 +13,6 @@ import com.candychat.net.view.RoundedTransformation;
 import com.candychat.net.WOUApp;
 import com.candychat.net.activity.main.FriendsFragment;
 import com.candychat.net.model.UserModel;
-import com.candychat.net.woumodel.Relations;
 import com.squareup.picasso.Picasso;
 import com.wouchat.messenger.R;
 
@@ -24,15 +23,15 @@ public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
     private Context _context;
     private List<String> _listDataHeader;
 
-    private List<Relations.MeEntity> meList = new ArrayList<>();
-    private List<Relations.FriendsEntity> friendsList = new ArrayList<>();
-    private List<Relations.FavoriteEntity> favoriteList = new ArrayList<>();
-    private List<Relations.GroupEntity> groupList = new ArrayList<>();
+    private List<com.module.candychat.net.model.Relations.MeBean> meList = new ArrayList<>();
+    private List<com.module.candychat.net.model.Relations.FriendsBean> friendsList = new ArrayList<>();
+    private List<com.module.candychat.net.model.Relations.FavoriteBean> favoriteList = new ArrayList<>();
+    private List<com.module.candychat.net.model.Relations.GroupBean> groupList = new ArrayList<>();
 
     List<UserModel> listFriendSuggestions = new ArrayList<>();
 
     public ExpandableListViewAdapter(Context context, List<String> listDataHeader,
-                                     Relations relations) {
+                                     com.module.candychat.net.model.Relations relations) {
         this._context = context;
         this._listDataHeader = listDataHeader;
 

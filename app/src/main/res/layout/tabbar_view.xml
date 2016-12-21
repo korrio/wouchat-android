@@ -21,7 +21,7 @@
         android:textColor="#fff"
         android:textSize="10sp"
         android:textStyle="bold"
-        android:background="@drawable/badge_circle"/>
+        android:background="@drawable/badge_circle" />
 
     <TextView
         android:visibility="gone"

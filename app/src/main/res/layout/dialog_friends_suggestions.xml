@@ -10,95 +10,95 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded"
         android:orientation="vertical">
-    <!-- title-->
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center|bottom"
-        android:layout_marginTop="@dimen/content_details_title_margin_top"
-        android:orientation="vertical"
-        android:padding="@dimen/content_details_baseline_margin">
-
-
-        <TextView
-            android:id="@+id/name_sms"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_gravity="center"
-            android:ellipsize="end"
-            android:maxLines="3"
-            android:gravity="center"
-            android:text="SMS"
-            android:textSize="25dp"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#252525"
-            android:layout_marginBottom="10dp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
-
-        <TextView
-            android:id="@+id/name_email"
-            android:layout_marginTop="10dp"
+        <!-- title-->
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:ellipsize="end"
-            android:maxLines="3"
-            android:text="Email"
-            android:textSize="25dp"
-            android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#252525"
-            android:layout_marginBottom="10dp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
-
-        <TextView
-            android:id="@+id/name_other"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:ellipsize="end"
-            android:maxLines="3"
-            android:textSize="25dp"
-            android:text="Other"
-            android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#252525"
-            android:layout_marginBottom="10dp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
-
-        <TextView
-            android:id="@+id/name_cancle"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:textSize="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:ellipsize="end"
-            android:maxLines="3"
-            android:text="Cancel"
-            android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#252525"
-            android:layout_marginBottom="10dp" />
+            android:layout_gravity="top|center|bottom"
+            android:layout_marginTop="@dimen/content_details_title_margin_top"
+            android:orientation="vertical"
+            android:padding="@dimen/content_details_baseline_margin">
 
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/name_sms"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:gravity="center"
+                android:text="SMS"
+                android:textSize="25dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#252525"
+                android:layout_marginBottom="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/name_email"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Email"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#252525"
+                android:layout_marginBottom="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/name_other"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textSize="25dp"
+                android:text="Other"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#252525"
+                android:layout_marginBottom="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/name_cancle"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Cancel"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#252525"
+                android:layout_marginBottom="10dp" />
+
+
+        </LinearLayout>
 
     </LinearLayout>
 

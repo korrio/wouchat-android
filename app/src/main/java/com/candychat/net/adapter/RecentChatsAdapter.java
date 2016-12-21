@@ -165,12 +165,12 @@ public class RecentChatsAdapter extends BaseAdapter {
                 holder.badgeTv.setText(String.valueOf(c.badge));
             }
 
-            Picasso.with(mContext)
-                    .load(c.avatarUrl)
-                    .centerCrop()
-                    .resize(200, 200)
-                    .transform(new RoundedTransformation(100, 4))
-                    .into(holder.avatarIv);
+//            Picasso.with(mContext)
+//                    .load(c.avatarUrl)
+//                    .centerCrop()
+//                    .resize(200, 200)
+//                    .transform(new RoundedTransformation(100, 4))
+//                    .into(holder.avatarIv);
         }
         return view;
     }

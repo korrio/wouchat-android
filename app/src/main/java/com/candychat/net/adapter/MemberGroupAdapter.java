@@ -1,8 +1,6 @@
 package com.candychat.net.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,21 +11,19 @@ import android.widget.TextView;
 
 import com.candychat.net.WOUApp;
 import com.candychat.net.view.RoundedTransformation;
-import com.candychat.net.woumodel.Relations;
-import com.module.candychat.net.model.RelationsGroup;
+import com.module.candychat.net.model.Relations;
 import com.squareup.picasso.Picasso;
 import com.wouchat.messenger.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MemberGroupAdapter extends BaseAdapter {
 
-    private ArrayList<Relations.GroupEntity.ConversationMembersEntity> groupList = new ArrayList<>();
+    private ArrayList<Relations.GroupBean.ConversationMembersBean> groupList = new ArrayList<>();
 
     Context context;
 
-    public MemberGroupAdapter(Context context, ArrayList<Relations.GroupEntity.ConversationMembersEntity> groupList) {
+    public MemberGroupAdapter(Context context, ArrayList<Relations.GroupBean.ConversationMembersBean> groupList) {
         this.context = context;
         this.groupList = groupList;
     }
@@ -41,7 +37,7 @@ public class MemberGroupAdapter extends BaseAdapter {
             LayoutInflater inflater = LayoutInflater.from(context);
             convertView = inflater.inflate(R.layout.item_member_group, parent, false);
 
-            Relations.GroupEntity.ConversationMembersEntity movie = groupList.get(position);
+            Relations.GroupBean.ConversationMembersBean movie = groupList.get(position);
             viewHolder.txt_topic = (TextView) convertView.findViewById(R.id.txt_topic);
             viewHolder.imageView24 = (ImageView) convertView.findViewById(R.id.imageView24);
 

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <ImageView
         android:id="@+id/img_item"
         android:layout_width="120dp"
@@ -11,6 +12,7 @@
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
         android:background="#0fa9e0" />
+
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"

@@ -67,6 +67,7 @@
             android:id="@+id/thumb"
             android:layout_gravity="center_horizontal"
             android:scaleType="fitCenter" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/feed_image_height"

@@ -6,18 +6,19 @@
     android:background="#fff">
 
     <!--  ListRow Left sied Thumbnail image -->
-    <LinearLayout android:id="@+id/thumbnail"
+    <LinearLayout
+        android:id="@+id/thumbnail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-                  android:layout_margin="4dp">
+        android:layout_margin="4dp">
 
         <ImageView
             android:layout_marginLeft="5dp"
             android:id="@+id/list_image"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/candy_logo"/>
+            android:src="@drawable/candy_logo" />
         <!-- Title Of Song-->
         <com.candychat.net.view.MyCustomTextView
             android:id="@+id/title"
@@ -38,20 +39,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center">
+
             <ImageView
                 android:src="@drawable/ic_activities_add"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:id="@+id/imageView7"
                 android:layout_gravity="right"
-                android:layout_marginRight="5dp"/>
+                android:layout_marginRight="5dp" />
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-
 
 
 </RelativeLayout>

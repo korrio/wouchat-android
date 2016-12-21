@@ -28,10 +28,10 @@
         app:showAsAction="never" />
 
     <!--<item-->
-        <!--android:id="@+id/Generate_qr"-->
-        <!--android:orderInCategory="100"-->
-        <!--android:title="Generate my new QR code"-->
-        <!--app:showAsAction="never" />-->
+    <!--android:id="@+id/Generate_qr"-->
+    <!--android:orderInCategory="100"-->
+    <!--android:title="Generate my new QR code"-->
+    <!--app:showAsAction="never" />-->
 
 
 </menu>

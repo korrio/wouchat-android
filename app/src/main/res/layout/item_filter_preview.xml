@@ -20,8 +20,7 @@
             android:id="@+id/image"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:background="@color/transparent"
-            />
+            android:background="@color/transparent" />
     </FrameLayout>
 
     <TextView
@@ -32,6 +31,6 @@
         android:textSize="12sp"
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:state_pressed="true"><shape android:shape="rectangle">
-        <corners android:radius="5dp" />
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" />
 
-        <solid android:color="@color/font" />
+            <solid android:color="@color/font" />
 
-        <padding android:bottom="6.0dip" android:left="10.0dip" android:right="6.0dip" android:top="10.0dip" />
+            <padding android:bottom="6.0dip" android:left="10.0dip" android:right="6.0dip" android:top="10.0dip" />
 
-        <stroke android:width="2dip" android:color="#0c76ab" />
-    </shape></item>
+            <stroke android:width="2dip" android:color="#0c76ab" />
+        </shape>
+    </item>
     <item android:state_pressed="false">
         <shape android:shape="rectangle">
-        <corners android:radius="5dp" />
+            <corners android:radius="5dp" />
 
-        <solid android:color="#0c76ab" />
+            <solid android:color="#0c76ab" />
 
-        <padding android:bottom="6.0dip" android:left="10.0dip" android:right="6.0dip" android:top="10.0dip" />
+            <padding android:bottom="6.0dip" android:left="10.0dip" android:right="6.0dip" android:top="10.0dip" />
 
-        <stroke android:width="2dip" android:color="#0c76ab" />
+            <stroke android:width="2dip" android:color="#0c76ab" />
         </shape>
     </item>
 

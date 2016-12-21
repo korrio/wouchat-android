@@ -47,7 +47,8 @@ public class GcmIntentService extends IntentService {
                     break;
                 default:
                     // if key is not specified, register with GCM
-                    registerGCM();
+                    /* remove this when run with emulator */
+                    //registerGCM();
             }
             //Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_SHORT).show();
         }else{

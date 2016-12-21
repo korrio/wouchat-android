@@ -40,10 +40,10 @@
         app:showAsAction="never" />
 
     <!--<item-->
-        <!--android:id="@+id/action_send_multi"-->
-        <!--android:orderInCategory="100"-->
-        <!--android:title="Send to Muti Friends"-->
-        <!--app:showAsAction="never" />-->
+    <!--android:id="@+id/action_send_multi"-->
+    <!--android:orderInCategory="100"-->
+    <!--android:title="Send to Muti Friends"-->
+    <!--app:showAsAction="never" />-->
 
     <item
         android:id="@+id/action_log_out"

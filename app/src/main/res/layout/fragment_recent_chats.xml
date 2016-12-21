@@ -1,5 +1,4 @@
-<com.vlonjatg.progressactivity.ProgressActivity
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.vlonjatg.progressactivity.ProgressActivity xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/progress"
@@ -15,9 +14,9 @@
     progressActivity:errorTitleTextColor="#FFFFFF">
 
     <!--<android.support.v4.widget.SwipeRefreshLayout-->
-        <!--android:id="@+id/swipe_container"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
+    <!--android:id="@+id/swipe_container"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -42,7 +41,7 @@
                 android:drawablePadding="5dp"
                 android:hint="search"
                 android:padding="5dp"
-                app:x_iOSStyleEnable="true"/>
+                app:x_iOSStyleEnable="true" />
         </LinearLayout>
 
 

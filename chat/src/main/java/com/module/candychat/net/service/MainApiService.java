@@ -2,6 +2,7 @@ package com.module.candychat.net.service;
 
 
 import com.module.candychat.net.event.FriendsDataResponse;
+import com.module.candychat.net.model.Relations;
 
 import java.util.HashMap;
 
@@ -32,6 +33,10 @@ public interface MainApiService {
     @GET("/user/{id}/followers")
     public void getFriends(@Path("id") int id,
                            Callback<FriendsDataResponse> responseJson);
+
+    @GET("/user/{id}/relations")
+    public void getRelations(@Path("id") int id,
+                           Callback<Relations> responseJson);
 
     //api.candychat.net/noti/history.php?id=4
     @GET("/noti/history.php")

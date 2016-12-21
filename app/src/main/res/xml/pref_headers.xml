@@ -4,15 +4,18 @@
 
     <header
         android:fragment="com.candychat.net.activity.SettingsActivity$GeneralPreferenceFragment"
-        android:title="Help" android:icon="@drawable/ic_activities_support" />
+        android:title="Help"
+        android:icon="@drawable/ic_activities_support" />
 
     <header
         android:fragment="com.candychat.net.activity.SettingsActivity$GeneralPreferenceFragment"
-        android:title="Profile" android:icon="@drawable/ic_profile_pop_contact" />
+        android:title="Profile"
+        android:icon="@drawable/ic_profile_pop_contact" />
 
     <header
         android:fragment="com.candychat.net.activity.SettingsActivity$ChatPreferenceFragment"
-        android:title="Chats" android:icon="@drawable/ic_chat" />
+        android:title="Chats"
+        android:icon="@drawable/ic_chat" />
 
     <header
         android:fragment="com.candychat.net.activity.SettingsActivity$NotificationPreferenceFragment"
@@ -20,7 +23,7 @@
         android:icon="@drawable/ic_activities_notice" />
 
     <!--<header-->
-        <!--android:fragment="com.candychat.net.activity.SettingsActivity$DataSyncPreferenceFragment"-->
-        <!--android:title="Contacts" android:icon="@drawable/ic_chat_pop_contact" />-->
+    <!--android:fragment="com.candychat.net.activity.SettingsActivity$DataSyncPreferenceFragment"-->
+    <!--android:title="Contacts" android:icon="@drawable/ic_chat_pop_contact" />-->
 
 </preference-headers>

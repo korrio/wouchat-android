@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="fill_parent"
@@ -53,8 +54,7 @@
                         android:layout_gravity="center_vertical"
                         android:text="WOU"
                         android:textColor="@color/color_text"
-                        android:textSize="18dp"
-                       />
+                        android:textSize="18dp" />
 
                     <com.candychat.net.view.MyCustomTextView
                         android:textStyle="bold"
@@ -96,7 +96,7 @@
                             android:layout_gravity="center_horizontal"
                             android:text="Sign up to join your friends"
                             android:textColor="#8a8a8a"
-                            android:textSize="18dp"/>
+                            android:textSize="18dp" />
 
                         <com.candychat.net.view.MyCustomTextView
                             android:id="@+id/textView2"
@@ -132,7 +132,7 @@
                         android:layout_below="@+id/b"
                         android:layout_gravity="center_horizontal"
                         android:background="#bfbfbf"
-                        android:padding="0dp"/>
+                        android:padding="0dp" />
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -158,6 +158,7 @@
                             android:layout_below="@+id/b"
                             android:layout_marginBottom="2dp"
                             android:background="#bfbfbf" />
+
                         <Button
                             android:id="@+id/btn_sign_up"
                             android:textStyle="bold"

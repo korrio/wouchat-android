@@ -2368,7 +2368,6 @@ public class ChatActivity extends BaseChatActivity implements View.OnClickListen
                 Log.e("fetchChatHistory", "error:" + error.getLocalizedMessage());
             }
         });
-
     }
 
 

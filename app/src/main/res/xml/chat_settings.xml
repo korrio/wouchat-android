@@ -3,35 +3,47 @@
 
     <PreferenceCategory android:title="Chat settings">
 
-        <PreferenceScreen android:title="Backup chat history" android:summary="To your phone SD card" android:key="backup_history">
+        <PreferenceScreen
+            android:title="Backup chat history"
+            android:summary="To your phone SD card"
+            android:key="backup_history">
 
             <!--<intent-->
-                <!--android:action="android.intent.action.VIEW"-->
-                <!--android:data="http://api.candychat.net/noti/history.php?id=4" />-->
+            <!--android:action="android.intent.action.VIEW"-->
+            <!--android:data="http://api.candychat.net/noti/history.php?id=4" />-->
 
         </PreferenceScreen>
 
-        <PreferenceScreen android:title="Email chat history" android:summary="" android:key="email_history">
+        <PreferenceScreen
+            android:title="Email chat history"
+            android:summary=""
+            android:key="email_history">
 
             <!--<intent-->
-                <!--android:action="android.intent.action.VIEW"-->
-                <!--android:data="http://api.candychat.net/noti/history.php?id=4&amp;email=iamnotkorr@gmail.com" />-->
+            <!--android:action="android.intent.action.VIEW"-->
+            <!--android:data="http://api.candychat.net/noti/history.php?id=4&amp;email=iamnotkorr@gmail.com" />-->
 
         </PreferenceScreen>
 
         <!--<PreferenceScreen android:title="Clear chat history" android:summary="All chat messages will be deleted from application" android:key="clear_history">-->
-            <!---->
+        <!---->
         <!--</PreferenceScreen>-->
 
         <!--<PreferenceScreen android:summary="Create shortcut" android:key="create_shotcut">-->
 
 
         <!--</PreferenceScreen>-->
-        <PreferenceScreen android:title="Change wallpaper" android:summary="Change chat wallpaper of your style" android:key="change_wallpaper">
+        <PreferenceScreen
+            android:title="Change wallpaper"
+            android:summary="Change chat wallpaper of your style"
+            android:key="change_wallpaper">
 
         </PreferenceScreen>
 
-        <PreferenceScreen android:title="Delete chat" android:summary="This conversation and chat history will be deleted" android:key="delete_chat">
+        <PreferenceScreen
+            android:title="Delete chat"
+            android:summary="This conversation and chat history will be deleted"
+            android:key="delete_chat">
 
 
         </PreferenceScreen>
@@ -45,7 +57,10 @@
             android:switchTextOff="ON"
             android:switchTextOn="OFF" />
 
-        <PreferenceScreen android:title="Language of colorful setting" android:summary="Add your local language or request new font style" android:key="launguage_setting">
+        <PreferenceScreen
+            android:title="Language of colorful setting"
+            android:summary="Add your local language or request new font style"
+            android:key="launguage_setting">
 
         </PreferenceScreen>
 
@@ -54,11 +69,17 @@
 
     <PreferenceCategory android:title="Block and Report">
 
-        <PreferenceScreen android:title="Block" android:summary="Block this user" android:key="block_chat">
+        <PreferenceScreen
+            android:title="Block"
+            android:summary="Block this user"
+            android:key="block_chat">
 
         </PreferenceScreen>
 
-        <PreferenceScreen android:title="Report" android:summary="Report violent chat" android:key="report_chat">
+        <PreferenceScreen
+            android:title="Report"
+            android:summary="Report violent chat"
+            android:key="report_chat">
 
         </PreferenceScreen>
 

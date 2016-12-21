@@ -5,9 +5,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <!--<ScrollView-->
-        <!--android:clickable="true"-->
-        <!--android:layout_width="fill_parent"-->
-        <!--android:layout_height="fill_parent">-->
+    <!--android:clickable="true"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent">-->
     <LinearLayout
         android:background="#fff"
         android:id="@+id/content"
@@ -55,7 +55,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal" />
-
 
 
                     <TextView
@@ -220,7 +219,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal" />
-
 
 
                     <TextView

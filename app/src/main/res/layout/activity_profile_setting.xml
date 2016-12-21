@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,18 +7,18 @@
     android:orientation="vertical">
 
     <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="vertical">-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
 
-        <!--<include layout="@layout/inc_toolbar" />-->
+    <!--<include layout="@layout/inc_toolbar" />-->
     <!--</LinearLayout>-->
 
     <LinearLayout
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:layout_width="0dp"
-        android:layout_height="0dp"/>
+        android:layout_height="0dp" />
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -54,7 +53,7 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:visibility="visible"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center" />
 
                         <ImageView
                             android:id="@+id/avatar_camera"
@@ -65,7 +64,7 @@
                             android:src="@drawable/ic_tabbar_photo"
                             android:layout_marginTop="-24dp"
                             android:background="@drawable/circular_shape"
-                            android:padding="5dp"/>
+                            android:padding="5dp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -92,7 +91,7 @@
                                     android:drawableLeft="@drawable/ic_add_friend_qrcode"
                                     android:padding="5dp"
                                     android:layout_weight="1"
-                                    android:layout_marginRight="5dp"/>
+                                    android:layout_marginRight="5dp" />
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -100,12 +99,13 @@
                                     android:orientation="horizontal"
                                     android:background="@drawable/btn"
                                     android:layout_weight="1">
+
                                     <ImageView
                                         android:id="@+id/image_hone_timeline"
                                         android:layout_width="28dp"
                                         android:layout_height="28dp"
                                         android:src="@drawable/ic_home_small"
-                                        android:layout_marginTop="6dp"/>
+                                        android:layout_marginTop="6dp" />
 
                                     <com.candychat.net.view.MyCustomTextView
                                         android:id="@+id/textView18"
@@ -121,7 +121,7 @@
                                         android:visibility="visible"
                                         android:paddingLeft="6dp"
                                         android:textSize="18dp"
-                                        android:gravity="center"/>
+                                        android:gravity="center" />
 
                                 </LinearLayout>
 
@@ -186,8 +186,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:orientation="vertical"
-                            >
+                            android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/input_name"
@@ -198,7 +197,7 @@
                                 android:inputType="text"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:hint="ex. Cool Name"
-                                android:textSize="24dp"/>
+                                android:textSize="24dp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -229,8 +228,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:orientation="vertical"
-                            >
+                            android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/input_status"
@@ -241,7 +239,7 @@
                                 android:inputType="text"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:hint="ex. Available"
-                                android:textSize="24dp"/>
+                                android:textSize="24dp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -282,7 +280,7 @@
                                 android:inputType="text"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:hint="ex. username01"
-                                android:textSize="24dp"/>
+                                android:textSize="24dp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -332,7 +330,7 @@
                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:hint="ex. 0123456789"
                                 android:visibility="gone"
-                                android:layout_gravity="left"/>
+                                android:layout_gravity="left" />
 
                             <Button
                                 android:id="@+id/verify_phone_button"
@@ -350,15 +348,15 @@
                                 android:layout_marginBottom="15dp" />
 
                             <!--<com.digits.sdk.android.DigitsAuthButton-->
-                                <!--android:id="@+id/verify_phone_button"-->
-                                <!--android:layout_width="wrap_content"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:layout_gravity="center_horizontal"-->
-                                <!--android:text="Verify phone number"-->
-                                <!--style="CustomDigitsTheme"-->
-                                <!--android:background="#0081B3"-->
-                                <!--android:visibility="gone"-->
-                                <!--android:layout_margin="6dp" />-->
+                            <!--android:id="@+id/verify_phone_button"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:text="Verify phone number"-->
+                            <!--style="CustomDigitsTheme"-->
+                            <!--android:background="#0081B3"-->
+                            <!--android:visibility="gone"-->
+                            <!--android:layout_margin="6dp" />-->
                         </LinearLayout>
 
                     </LinearLayout>
@@ -460,9 +458,6 @@
                 </LinearLayout>
 
 
-
-
-
             </LinearLayout>
 
             <com.candychat.net.view.MyCustomTextView
@@ -480,9 +475,6 @@
         </LinearLayout>
 
     </ScrollView>
-
-
-
 
 
 </LinearLayout>

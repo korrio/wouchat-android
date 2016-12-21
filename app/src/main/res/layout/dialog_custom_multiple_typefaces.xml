@@ -10,24 +10,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <Spinner
             android:id="@+id/typefacesel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
+
         <CheckBox
             android:id="@+id/boldsel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BOLD"/>
+            android:text="BOLD" />
+
         <CheckBox
             android:id="@+id/italicsel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ITALIC"/>
+            android:text="ITALIC" />
     </LinearLayout>
-
 
 
 </LinearLayout>

@@ -35,7 +35,6 @@ import com.candychat.net.WOUApp;
 import com.candychat.net.activity.ChatActivity;
 import com.candychat.net.activity.MainSettingActivity;
 import com.candychat.net.activity.contact.Contact;
-import com.candychat.net.activity.contact.ContactFetcher;
 import com.candychat.net.activity.main.event.GetRelationDataEvent;
 import com.candychat.net.activity.profile.ProfileActivityNew;
 import com.candychat.net.activity.search.SearchActivity;
@@ -56,7 +55,6 @@ import com.candychat.net.handler.ApiBus;
 import com.candychat.net.manager.PrefManager;
 import com.candychat.net.view.CustomTypefaceSpan;
 import com.candychat.net.view.RoundedTransformation;
-import com.candychat.net.woumodel.Relations;
 import com.facebook.accountkit.AccessToken;
 import com.facebook.accountkit.AccountKitLoginResult;
 import com.facebook.accountkit.ui.AccountKitActivity;
@@ -64,6 +62,8 @@ import com.facebook.accountkit.ui.AccountKitConfiguration;
 import com.facebook.accountkit.ui.LoginType;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.module.candychat.net.model.Relations;
+import com.module.candychat.net.service.MainApiService;
 import com.module.candychat.net.util.ToastUtils;
 import com.squareup.otto.Subscribe;
 import com.squareup.picasso.Picasso;
@@ -75,6 +75,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import retrofit.Callback;
+import retrofit.RequestInterceptor;
+import retrofit.RestAdapter;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
 public class FriendsFragment extends BaseFragment {
     private AQuery aq;
@@ -147,19 +153,14 @@ public class FriendsFragment extends BaseFragment {
         );
 
 
-
-
-
-
-
-
         prefManager = WOUApp.get(getActivity()).getPrefManager();
         userId = prefManager.userId().getOr(0);
 
         if (userId == 0)
             WOUApp.logout(getActivity());
 
-        fetchContact();
+        //fetchContact();
+        fetchRelationsData();
 
     }
 
@@ -170,7 +171,8 @@ public class FriendsFragment extends BaseFragment {
     }
 
     @Subscribe public void onRefreshContact(RefreshEvent event) {
-        fetchContact();
+        //fetchContact();
+        fetchRelationsData();
     }
 
     boolean myItemShouldBeEnabled = false;
@@ -222,13 +224,13 @@ public class FriendsFragment extends BaseFragment {
 
     @Subscribe
     public void onGetRelationsData(GetRelationDataEvent event) {
-        getRelationsData();
+        fetchRelationsData();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        getRelationsData();
+        fetchRelationsData();
 //        if(toolbar != null) {
 //            getActivity().setTitle(Spanny.spanText(getResources().getString(R.string.friends), new CustomTypefaceSpan(WOUApp.CustomFontTypeFace())));
 //            toolbar.inflateMenu(R.menu.menu_main_friends);
@@ -240,7 +242,7 @@ public class FriendsFragment extends BaseFragment {
         View rootView = inflater.inflate(R.layout.fragment_friend, container, false);
 
         if (!checkData) {
-            getRelationsData();
+            fetchRelationsData();
             checkData = true;
         }
         //ApiBus.getInstance().post(new LoadTimelineEvent(Integer.parseInt("295"), "", 1, 20, false));
@@ -277,7 +279,19 @@ public class FriendsFragment extends BaseFragment {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, final int childPosition, long id) {
 
+                if(relations == null)
+                    System.exit(0); ;
+
                 dialog = new Dialog(getActivity(), R.style.FullHeightDialog);
+
+                System.out.println("groupPosition:" + groupPosition + " " + "childPosition:" + childPosition);
+
+                System.out.println("relation.getMe:" + relations.getMe() + " " +
+                        "relation.getFriends:" + relations.getFriends() + " " +
+                        "relation.getGroup:" + relations.getGroup() + " " +
+                        "relation.getFavorite:" + relations.getFavorite() + " ");
+
+
 
 
                 if (groupPosition == 0) {
@@ -436,7 +450,7 @@ public class FriendsFragment extends BaseFragment {
                     });
 
 
-                    if (relations.getGroup().size() != 0) {
+                    if (relations.getGroup() != null) {
 
                         title_group.setText(relations.getGroup().get(childPosition).getName() + " (" + relations.getGroup().get(childPosition).getConversationMembers().size() + ")");
 
@@ -448,7 +462,7 @@ public class FriendsFragment extends BaseFragment {
                                 .into(img_group);
 
                         int index = 0;
-                        for (Relations.GroupEntity.ConversationMembersEntity conversationMembersEntity : relations.getGroup().get(childPosition).getConversationMembers()) {
+                        for (Relations.GroupBean.ConversationMembersBean conversationMembersEntity : relations.getGroup().get(childPosition).getConversationMembers()) {
                             if (index <= 3) {
                                 if (conversationMembersEntity != null)
                                     Picasso.with(getActivity())
@@ -597,7 +611,7 @@ public class FriendsFragment extends BaseFragment {
                     dialog.show();
 
                 }
-                if (groupPosition == 3) {
+                if (groupPosition == 3 && relations.getFriends() != null) {
                     String urlAvatra = WOUApp.SOCIAL_ENDPOINT + "/" + relations.getFriends().get(childPosition).getAvatar();
 
                     String titleName = relations.getFriends().get(childPosition).getName();
@@ -694,13 +708,63 @@ public class FriendsFragment extends BaseFragment {
     @Subscribe
     public void onAddUserEventSuccess(AddUserEventSuccess event) {
         Toast.makeText(getContext(),event.user.getMessage(),Toast.LENGTH_SHORT).show();
-        getRelationsData();
+        fetchRelationsData();
     }
 
 
     private void scrollToBottom() {
         if (expListView != null)
             expListView.setSelection(expListView.getBottom());
+    }
+
+    public static MainApiService buildMainApi() {
+        String BASE_URL = "http://api.candychat.net";
+
+        return new RestAdapter.Builder()
+                .setLogLevel(RestAdapter.LogLevel.NONE)
+                .setEndpoint(BASE_URL)
+
+                .setRequestInterceptor(new RequestInterceptor() {
+                    @Override
+                    public void intercept(RequestFacade request) {
+                    }
+                })
+                .build()
+                .create(MainApiService.class);
+    }
+
+    public void fetchRelationsData() {
+        buildMainApi().getRelations(userId, new Callback<com.module.candychat.net.model.Relations>() {
+            @Override
+            public void success(com.module.candychat.net.model.Relations relationsResp, Response response) {
+                relations = relationsResp;
+                if(relations != null && relations.getGroup() != null) {
+                    listDataHeader = new ArrayList<String>();
+                    listDataHeader.add("Me");
+                    listDataHeader.add("Groups " + relations.getGroup().size());
+                    listDataHeader.add("Recently add you " + relations.getFavorite().size());
+                    listDataHeader.add("Friends " + relations.getFriends().size());
+
+
+                    listAdapter = new ExpandableListViewAdapter(getActivity(), listDataHeader, relations);
+                    expListView.setAdapter(listAdapter);
+                    listAdapter.notifyDataSetChanged();
+
+                    expListView.expandGroup(0);
+                    expListView.expandGroup(1);
+                    expListView.expandGroup(2);
+                    expListView.expandGroup(3);
+
+                } else {
+                    WOUApp.logout(getActivity());
+                }
+            }
+
+            @Override
+            public void failure(RetrofitError error) {
+
+            }
+        });
     }
 
     public void getRelationsData() {
@@ -725,14 +789,14 @@ public class FriendsFragment extends BaseFragment {
                     listDataHeader.add("Friends " + relations.getFriends().size());
 
 
-                    listAdapter = new ExpandableListViewAdapter(getActivity(), listDataHeader, relations);
-                    expListView.setAdapter(listAdapter);
-                    listAdapter.notifyDataSetChanged();
-
-                    expListView.expandGroup(0);
-                    expListView.expandGroup(1);
-                    expListView.expandGroup(2);
-                    expListView.expandGroup(3);
+//                    listAdapter = new ExpandableListViewAdapter(getActivity(), listDataHeader, relations);
+//                    expListView.setAdapter(listAdapter);
+//                    listAdapter.notifyDataSetChanged();
+//
+//                    expListView.expandGroup(0);
+//                    expListView.expandGroup(1);
+//                    expListView.expandGroup(2);
+//                    expListView.expandGroup(3);
 
                 } else {
                     WOUApp.logout(getActivity());
@@ -758,14 +822,14 @@ public class FriendsFragment extends BaseFragment {
             listDataHeader.add("Friends " + relations.getFriends().size());
 
 
-            listAdapter = new ExpandableListViewAdapter(getActivity(), listDataHeader, relations);
-            expListView.setAdapter(listAdapter);
-            listAdapter.notifyDataSetChanged();
-
-            expListView.expandGroup(0);
-            expListView.expandGroup(1);
-            expListView.expandGroup(2);
-            expListView.expandGroup(3);
+//            listAdapter = new ExpandableListViewAdapter(getActivity(), listDataHeader, relations);
+//            expListView.setAdapter(listAdapter);
+//            listAdapter.notifyDataSetChanged();
+//
+//            expListView.expandGroup(0);
+//            expListView.expandGroup(1);
+//            expListView.expandGroup(2);
+//            expListView.expandGroup(3);
 
         }
     }
@@ -784,7 +848,8 @@ public class FriendsFragment extends BaseFragment {
                 startActivity(i);
                 return true;
             case R.id.action_refresh:
-                fetchContact();
+                //fetchContact();
+                fetchRelationsData();
                 //ApiBus.getInstance().post(new GetRelationDataEvent());
                 //FragmentTransaction ft = getFragmentManager().beginTransaction();
                 //ft.detach(this).attach(FriendsFragment.getInstance("friend")).commit();

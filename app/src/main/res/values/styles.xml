@@ -3,7 +3,6 @@
     <style name="AppLoginTheme" parent="Theme.AccountKit" />
 
 
-
     <style name="AppLoginTheme.Wouchat" parent="Theme.AccountKit">
         <item name="com_accountkit_primary_color">@color/primary</item>
         <item name="com_accountkit_primary_text_color">@android:color/white</item>
@@ -124,8 +123,8 @@
 
     <!--<style name="CustomDigitsTheme" parent="AppTheme">-->
 
-        <!--<item name="dgts__accentColor">@color/primary</item>-->
-        <!--&lt;!&ndash;<item name="android:background">@drawable/btn</item>&ndash;&gt;-->
+    <!--<item name="dgts__accentColor">@color/primary</item>-->
+    <!--&lt;!&ndash;<item name="android:background">@drawable/btn</item>&ndash;&gt;-->
     <!--</style>-->
 
     <style name="Toolbar" parent="Theme.AppCompat">

@@ -48,7 +48,7 @@
                     android:layout_weight="1"
                     android:orientation="horizontal"
                     android:layout_width="0dp"
-                    android:layout_height="0dp"/>
+                    android:layout_height="0dp" />
 
             </LinearLayout>
 
@@ -71,8 +71,7 @@
                 android:maxLines="3"
                 android:text="Best friend"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="#252525"
-                />
+                android:textColor="#252525" />
 
 
         </LinearLayout>

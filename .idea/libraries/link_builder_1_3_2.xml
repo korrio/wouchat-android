@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="link_builder-1.3.2">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.klinkerapps/link_builder/1.3.2/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.klinkerapps/link_builder/1.3.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.klinkerapps/link_builder/1.3.2/64dddc6ab19a99ca0c694e9b62828125f4736423/link_builder-1.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

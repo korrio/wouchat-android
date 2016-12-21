@@ -1,18 +1,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:custom="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/layout_root"
-                android:background="@color/base"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:background="@color/base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:background="@null">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TextView
                 android:id="@+id/textTitle"
                 android:layout_width="wrap_content"
@@ -21,8 +23,8 @@
                 android:text="Set Avatar"
                 android:textColor="@color/text"
                 android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"
-                />
+                android:layout_alignParentLeft="true" />
+
             <Button
                 android:id="@+id/buttonDone"
                 android:layout_centerVertical="true"
@@ -34,7 +36,7 @@
                 android:textColor="@color/base"
                 android:background="@color/text"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"/>
+                android:layout_height="@dimen/button_height" />
 
         </RelativeLayout>
 
@@ -64,7 +66,7 @@
                 android:textColor="@color/base"
                 android:background="@color/text"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"/>
+                android:layout_height="@dimen/button_height" />
 
             <Button
                 android:id="@+id/button1_1"
@@ -76,7 +78,7 @@
                 android:textColor="@color/base"
                 android:background="@color/text"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"/>
+                android:layout_height="@dimen/button_height" />
 
             <Button
                 android:id="@+id/button3_4"
@@ -88,7 +90,8 @@
                 android:textColor="@color/base"
                 android:background="@color/text"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"/>
+                android:layout_height="@dimen/button_height" />
+
             <Button
                 android:id="@+id/button4_3"
                 android:layout_gravity="center_vertical"
@@ -99,7 +102,8 @@
                 android:textColor="@color/base"
                 android:background="@color/text"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"/>
+                android:layout_height="@dimen/button_height" />
+
             <Button
                 android:id="@+id/button9_16"
                 android:layout_gravity="center_vertical"
@@ -110,7 +114,8 @@
                 android:textColor="@color/base"
                 android:background="@color/text"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"/>
+                android:layout_height="@dimen/button_height" />
+
             <Button
                 android:id="@+id/button16_9"
                 android:layout_gravity="center_vertical"
@@ -121,7 +126,7 @@
                 android:textColor="@color/base"
                 android:background="@color/text"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"/>
+                android:layout_height="@dimen/button_height" />
 
             <Button
                 android:id="@+id/buttonCustom"
@@ -133,7 +138,7 @@
                 android:textColor="@color/base"
                 android:background="@color/text"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"/>
+                android:layout_height="@dimen/button_height" />
 
             <Button
                 android:id="@+id/buttonFree"
@@ -145,7 +150,7 @@
                 android:textColor="@color/base"
                 android:background="@color/text"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"/>
+                android:layout_height="@dimen/button_height" />
 
             <Button
                 android:id="@+id/buttonCircle"
@@ -157,7 +162,7 @@
                 android:textColor="@color/base"
                 android:background="@color/text"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"/>
+                android:layout_height="@dimen/button_height" />
 
 
         </LinearLayout>
@@ -185,16 +190,16 @@
         custom:guideShowMode="show_on_touch"
         custom:minFrameSize="50dp"
         custom:frameStrokeWeight="1dp"
-        custom:guideStrokeWeight="1dp"
-        />
+        custom:guideStrokeWeight="1dp" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginBottom="16dp"
         android:layout_alignBottom="@id/cropImageView"
-        android:layout_centerHorizontal="true"
-        >
+        android:layout_centerHorizontal="true">
+
         <Button
             android:id="@+id/buttonChangeImage"
             android:layout_width="wrap_content"
@@ -204,8 +209,7 @@
             android:text="CHANGE IMAGE"
             android:textSize="@dimen/text_size_s"
             android:textColor="@color/base"
-            android:background="@color/text"
-            />
+            android:background="@color/text" />
 
         <Button
             android:id="@+id/buttonRotateImage"
@@ -215,18 +219,15 @@
             android:text="ROTATE IMAGE"
             android:textSize="@dimen/text_size_s"
             android:textColor="@color/base"
-            android:background="@color/text"
-            />
+            android:background="@color/text" />
 
     </LinearLayout>
-
 
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignBottom="@id/cropImageView"
-        android:background="@color/handle"
-        />
+        android:background="@color/handle" />
 
 </RelativeLayout>

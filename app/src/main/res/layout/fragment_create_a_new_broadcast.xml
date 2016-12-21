@@ -1,16 +1,15 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="vertical">-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
 
-        <!--<include layout="@layout/inc_toolbar" />-->
+    <!--<include layout="@layout/inc_toolbar" />-->
     <!--</LinearLayout>-->
 
     <LinearLayout
@@ -43,12 +42,11 @@
                 app:met_floatingLabel="normal"
                 app:met_maxCharacters="24"
                 android:layout_gravity="center_vertical"
-                android:textSize="24dp"
-                />
-
+                android:textSize="24dp" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,7 +97,6 @@
         </LinearLayout>
 
 
-
         <LinearLayout
             android:layout_weight="1"
             android:orientation="vertical"
@@ -114,6 +111,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center_horizontal"
                 android:visibility="gone">
+
                 <EditText
                     android:layout_weight="1"
                     android:layout_width="fill_parent"
@@ -136,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/label_view"
                 android:layout_marginBottom="10dp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView"
@@ -150,6 +148,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <Button
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"

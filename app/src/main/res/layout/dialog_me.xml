@@ -81,8 +81,7 @@
             android:layout_marginTop="5dp"
             android:text="Candy Chat"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#252525"
-            />
+            android:textColor="#252525" />
 
 
     </LinearLayout>

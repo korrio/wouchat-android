@@ -23,6 +23,7 @@
             android:layout_height="128dp"
             android:orientation="vertical"
             android:layout_margin="6dp">
+
             <ImageView
                 android:id="@+id/avatar_profile"
                 android:layout_width="100dp"
@@ -45,6 +46,7 @@
 
 
         </RelativeLayout>
+
         <LinearLayout
             android:id="@+id/click"
             android:layout_marginTop="5dp"
@@ -54,7 +56,6 @@
             android:layout_width="fill_parent"
             android:layout_height="40dp"
             android:orientation="horizontal">
-
 
 
             <TextView
@@ -93,6 +94,7 @@
                     android:layout_gravity="right" />
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:background="#fff"
             android:layout_width="match_parent"

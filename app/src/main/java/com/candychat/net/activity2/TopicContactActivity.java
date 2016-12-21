@@ -4,7 +4,6 @@ package com.candychat.net.activity2;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -22,15 +21,13 @@ import com.candychat.net.adapter.TopicAdapter;
 import com.candychat.net.base.BaseActivity;
 import com.candychat.net.manager.PrefManager;
 import com.candychat.net.view.CustomTypefaceSpan;
-import com.candychat.net.woumodel.Relations;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.module.candychat.net.model.Relations;
 import com.wouchat.messenger.R;
 
 import org.json.JSONObject;
-import org.parceler.Parcels;
 
-import java.util.ArrayList;
 import java.util.List;
 
 

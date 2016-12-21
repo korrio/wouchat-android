@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.candychat.net.woumodel.Relations;
+import com.module.candychat.net.model.Relations;
 import com.wouchat.messenger.R;
 
 import java.util.ArrayList;
@@ -17,10 +17,10 @@ import java.util.List;
  
 public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.MyViewHolder> {
 
-    private List<Relations.GroupEntity> groupList = new ArrayList<>();
+    private List<Relations.GroupBean> groupList = new ArrayList<>();
     Context context;
     private static OnItemClickListener mItemClickListener;
-    public TopicAdapter(Context context, List<Relations.GroupEntity> moviesList) {
+    public TopicAdapter(Context context, List<Relations.GroupBean> moviesList) {
         this.context = context;
         this.groupList = moviesList;
     }
@@ -41,7 +41,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.MyViewHolder
  
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Relations.GroupEntity movie = groupList.get(position);
+        Relations.GroupBean movie = groupList.get(position);
         Log.e("หกหกหกหกห",movie.getName());
         holder.txt_topic.setText(movie.getName());
 

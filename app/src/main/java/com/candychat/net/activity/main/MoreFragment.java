@@ -162,13 +162,13 @@ public class MoreFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         name_txt.setText(mPref.name().getOr(""));
-        if(!(mPref.avatar().getOr("")).equals(""))
-            Picasso.with(getActivity())
-                    .load(WOUApp.SOCIAL_ENDPOINT + "/" + mPref.avatar().getOr(""))
-                    .centerCrop()
-                    .resize(200, 200)
-                    .transform(new RoundedTransformation(100, 4))
-                    .into(avatar);
+        //if(!(mPref.avatar().getOr("")).equals(""))
+//            Picasso.with(getActivity())
+//                    .load(WOUApp.SOCIAL_ENDPOINT + "/" + mPref.avatar().getOr(""))
+//                    .centerCrop()
+//                    .resize(200, 200)
+//                    .transform(new RoundedTransformation(100, 4))
+//                    .into(avatar);
 
 //        if(toolbar != null) {
 //            getActivity().setTitle(Spanny.spanText(getResources().getString(R.string.activities), new CustomTypefaceSpan(WOUApp.CustomFontTypeFace())));

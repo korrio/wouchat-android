@@ -7,7 +7,8 @@
     android:background="#fff">
 
     <!--  ListRow Left sied Thumbnail image -->
-    <LinearLayout android:id="@+id/thumbnail"
+    <LinearLayout
+        android:id="@+id/thumbnail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="3dip"
@@ -18,7 +19,7 @@
             android:id="@+id/list_image"
             android:layout_width="50dip"
             android:layout_height="50dip"
-            android:src="@drawable/candy_logo"/>
+            android:src="@drawable/candy_logo" />
 
     </LinearLayout>
 
@@ -49,8 +50,6 @@
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Just gona stand there and ..."
         android:layout_gravity="center" />
-
-
 
 
 </RelativeLayout>

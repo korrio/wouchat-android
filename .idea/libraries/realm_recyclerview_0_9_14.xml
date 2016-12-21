@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="realm-recyclerview-0.9.14">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/realm/build/intermediates/exploded-aar/com.github.thorbenprimke/realm-recyclerview/0.9.14/res" />
+      <root url="jar://$PROJECT_DIR$/realm/build/intermediates/exploded-aar/com.github.thorbenprimke/realm-recyclerview/0.9.14/jars/libs/diffutils-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/realm/build/intermediates/exploded-aar/com.github.thorbenprimke/realm-recyclerview/0.9.14/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

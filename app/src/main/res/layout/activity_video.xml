@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black" >
+    android:background="@android:color/black">
 
     <com.candychat.net.video.FullScreenVideoView
         android:id="@+id/videoview"
@@ -13,13 +13,13 @@
     <RelativeLayout
         android:id="@+id/upper_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:id="@+id/top_layout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#50000000" >
+            android:background="#50000000">
 
             <TextView
                 android:layout_width="match_parent"
@@ -39,15 +39,14 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
-        android:background="#50000000" >
+        android:background="#50000000">
 
         <ImageView
             android:id="@+id/play_btn"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
-             />
+            android:layout_marginLeft="15dp" />
 
         <TextView
             android:id="@+id/play_time"
