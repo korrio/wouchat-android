@@ -18,6 +18,7 @@ import com.candychat.net.adapter.RecyclerviewHorizontalMediaAdapter;
 import com.candychat.net.adapter.RecyclerviewHorizontalVideosAdapter;
 import com.candychat.net.adapter.RecyclerviewHorizontalVoicesAdapter;
 import com.candychat.net.base.BaseToolbarActivity;
+import com.candychat.net.fragment.CameraFragment;
 import com.wouchat.messenger.R;
 
 
@@ -33,6 +34,15 @@ public class InfomationGroupDataFragment extends Fragment{
 
     ListViewChatInfomationAdapter mAdapterListView;
     LinearLayout childScroll;
+
+    public static InfomationGroupDataFragment getInstance(String message) {
+        InfomationGroupDataFragment mainFragment = new InfomationGroupDataFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("MSG", message);
+        mainFragment.setArguments(bundle);
+        return mainFragment;
+
+    }
 
 
 

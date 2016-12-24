@@ -18,8 +18,6 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.anthonycr.grant.PermissionsManager;
-import com.anthonycr.grant.PermissionsResultAction;
 import com.candychat.net.ActivityResultEvent;
 import com.candychat.net.WOUApp;
 import com.candychat.net.activity.event.UpdateBadgeEvent;
@@ -27,6 +25,7 @@ import com.candychat.net.activity.main.FriendsFragment;
 import com.candychat.net.activity.main.MoreFragment;
 import com.candychat.net.activity.main.RecentChatsFragment;
 import com.candychat.net.activity.main.event.GetRelationDataEvent;
+import com.candychat.net.activity.timeline.InfomationGroupDataFragment;
 import com.candychat.net.adapter.FragmentPageAdapter;
 import com.candychat.net.alogin.activity.LoginOrSignupActivity;
 import com.candychat.net.base.BaseToolbarActivity;
@@ -36,7 +35,10 @@ import com.candychat.net.event.GetRoomChatSuccess;
 import com.candychat.net.event.GetRoomSelfChatSuccess;
 import com.candychat.net.event.NotiEvent;
 import com.candychat.net.event.NotiListSuccess;
-import com.candychat.net.fragment.sub.CameraFragment;
+import com.candychat.net.fragment.CameraFragment;
+import com.candychat.net.fragment.ChatInfoFragment;
+import com.candychat.net.fragment.FragmentA;
+import com.candychat.net.fragment.FragmentB;
 import com.candychat.net.gcm.Config;
 import com.candychat.net.gcm.GcmIntentService;
 import com.candychat.net.gcm.event.GCMLogin;
@@ -46,7 +48,6 @@ import com.candychat.net.handler.ApiBus;
 import com.candychat.net.impls.OnFragmentInteractionListener;
 import com.candychat.net.manager.PrefManager;
 import com.candychat.net.model.ListRecentChat;
-import com.candychat.net.utils.ContactsUtils;
 import com.candychat.net.view.CustomViewPager;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -56,11 +57,10 @@ import com.wouchat.messenger.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 import butterknife.Bind;
-import me.leolin.shortcutbadger.ShortcutBadger;
+import eu.long1.spacetablayout.SpaceTabLayout;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -69,8 +69,8 @@ public class MainActivity extends BaseToolbarActivity implements OnFragmentInter
 
     @Bind(R.id.viewpager)
     CustomViewPager mViewpager;
-    @Bind(R.id.tabs)
-    TabLayout mTabs;
+//    @Bind(R.id.tabs)
+//    TabLayout mTabs;
 
     private FragmentPageAdapter pageAdapter;
     String event, friend, camera, chat, more = "";
@@ -194,9 +194,41 @@ public class MainActivity extends BaseToolbarActivity implements OnFragmentInter
 
         mViewpager.setPagingEnabled(false);
         mViewpager.setOffscreenPageLimit(2);
-        setupViewPager(mViewpager);
-        setupTabLayout(mTabs);
+        //setupTabLayout(tabLayout);
+        setupSpaceTabLayout(mViewpager,savedInstanceState);
 
+    }
+
+    @Bind(R.id.spaceTabLayout)
+    SpaceTabLayout tabLayout;
+
+    private void setupSpaceTabLayout(ViewPager viewPager, Bundle savedInstanceState) {
+
+        pageAdapter = new FragmentPageAdapter(getApplicationContext(), getSupportFragmentManager());
+
+        mFragments.add(FriendsFragment.getInstance(friend));
+        mFragments.add(RecentChatsFragment.getInstance(chat));
+        mFragments.add(RecentChatsFragment.getInstance(chat));
+        mFragments.add(RecentChatsFragment.getInstance(chat));
+        mFragments.add(MoreFragment.getInstance(more));
+
+        pageAdapter.addFragment(mFragments.get(0), "friend", R.drawable.ic_tabbar_friends, notiFollowCount);
+        pageAdapter.addFragment(mFragments.get(1), "event", R.drawable.ic_tabbar_time_line,0);
+        pageAdapter.addFragment(mFragments.get(2), "chat", R.drawable.ic_tabbar_chat, notiChatCount);
+        pageAdapter.addFragment(mFragments.get(3), "camera", R.drawable.ic_tabbar_photo,0);
+        pageAdapter.addFragment(mFragments.get(4), "more", R.drawable.ic_tabbar_more, 0);
+        viewPager.setAdapter(pageAdapter);
+
+        pageAdapter.notifyDataSetChanged();
+
+        tabLayout = (SpaceTabLayout) findViewById(R.id.spaceTabLayout);
+        tabLayout.initialize(viewPager, getSupportFragmentManager(), mFragments, savedInstanceState);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        tabLayout.saveState(outState);
+        super.onSaveInstanceState(outState);
     }
 
     int REQUEST_ID_MULTIPLE_PERMISSIONS = 001;
@@ -227,25 +259,7 @@ public class MainActivity extends BaseToolbarActivity implements OnFragmentInter
 
     @Override
     protected void initListeners() {
-
-
         checkPermissions();
-//        PermissionsManager.getInstance().requestPermissionsIfNecessaryForResult(MainActivity.this,
-//                new String[]{Manifest.permission.READ_CONTACTS}, new PermissionsResultAction() {
-//
-//                    @Override
-//                    public void onGranted() {
-//
-//                    }
-//
-//                    @Override
-//                    public void onDenied(String permission) {
-//
-//                    }
-//                }
-//        );
-
-
         mRegistrationBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -422,33 +436,11 @@ public class MainActivity extends BaseToolbarActivity implements OnFragmentInter
             }
         });
 
-
         ApiBus.getInstance().post(new NotiEvent(userId, "badge"));
 
     }
 
     ArrayList<Fragment> mFragments = new ArrayList<>();
-
-    public void setupViewPager(ViewPager viewPager) {
-        pageAdapter = new FragmentPageAdapter(getApplicationContext(), getSupportFragmentManager());
-
-        mFragments.add(FriendsFragment.getInstance(friend));
-        mFragments.add(RecentChatsFragment.getInstance(chat));
-        mFragments.add(MoreFragment.getInstance(more));
-        //mFragments.add(FeedListFragment.getInstance(event));
-        mFragments.add(CameraFragment.getInstance(camera));
-
-        // pageAdapter.addFragment(mFragments.get(3), "event", R.drawable.ic_tabbar_time_line,"");
-        pageAdapter.addFragment(mFragments.get(0), "friend", R.drawable.ic_tabbar_friends, notiFollowCount);
-        // pageAdapter.addFragment(mFragments.get(4), "camera", R.drawable.ic_tabbar_photo,"");
-        pageAdapter.addFragment(mFragments.get(1), "chat", R.drawable.ic_tabbar_chat, notiChatCount);
-        pageAdapter.addFragment(mFragments.get(2), "more", R.drawable.ic_tabbar_more, 0);
-        viewPager.setAdapter(pageAdapter);
-
-        pageAdapter.notifyDataSetChanged();
-
-
-    }
 
     public static boolean isUpdateBadge = false;
 
@@ -465,37 +457,36 @@ public class MainActivity extends BaseToolbarActivity implements OnFragmentInter
 
             mViewpager.destroyDrawingCache();
             pageAdapter.notifyDataSetChanged();
-            mTabs.invalidate();
+            tabLayout.invalidate();
 
-            setupViewPager(mViewpager);
+            //setupViewPager(mViewpager);
 
-            mTabs.removeAllTabs();
-            mTabs.setTabMode(TabLayout.MODE_FIXED);
-            mTabs.setTabGravity(TabLayout.GRAVITY_FILL);
-            mTabs.setupWithViewPager(mViewpager);
-            for (int i = 0; i < mTabs.getTabCount(); i++) {
-                TabLayout.Tab tab = mTabs.getTabAt(i);
-                if (pageAdapter != null) {
-                    assert tab != null;
-                    tab.setCustomView(pageAdapter.getTabView(i));
-                }
-            }
-            mViewpager.setCurrentItem(0);
+            //tabLayout.removeAllTabs();
+//            tabLayout.setTabMode(TabLayout.MODE_FIXED);
+//            tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+//            tabLayout.setupWithViewPager(mViewpager);
+//            for (int i = 0; i < tabLayout.getTabCount(); i++) {
+//                TabLayout.Tab tab = tabLayout.getTabAt(i);
+//                if (pageAdapter != null) {
+//                    assert tab != null;
+//                    tab.setCustomView(pageAdapter.getTabView(i));
+//                }
+//            }
+           // mViewpager.setCurrentItem(2);
             isUpdateBadge = true;
-
         }
 
 
 //
-//        pageAdapter.getTabView(0);
-//
-//        pageAdapter.notifyDataSetChanged();
+        pageAdapter.getTabView(2);
+
+        pageAdapter.notifyDataSetChanged();
 //        mViewpager.destroyDrawingCache();
 
-        ShortcutBadger.applyCount(mContext, notiChatCount); //for 1.1.4
-
-        Log.e("fire", "notiChatCount" + notiChatCount);
-        Log.e("fire", "notiFollowCount" + notiFollowCount);
+//        ShortcutBadger.applyCount(mContext, notiChatCount); //for 1.1.4
+//
+//        Log.e("fire", "notiChatCount" + notiChatCount);
+//        Log.e("fire", "notiFollowCount" + notiFollowCount);
     }
 
     @Override
@@ -503,18 +494,8 @@ public class MainActivity extends BaseToolbarActivity implements OnFragmentInter
 
     }
 
-    public void setupTabLayout(TabLayout tabLayout) {
+    public void setupTabLayout(SpaceTabLayout tabLayout) {
 
-        tabLayout.setTabMode(TabLayout.MODE_FIXED);
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-        tabLayout.setupWithViewPager(mViewpager);
-        for (int i = 0; i < tabLayout.getTabCount(); i++) {
-            TabLayout.Tab tab = tabLayout.getTabAt(i);
-            if (pageAdapter != null) {
-                assert tab != null;
-                tab.setCustomView(pageAdapter.getTabView(i));
-            }
-        }
         mViewpager.setCurrentItem(0);
         tabLayout.requestFocus();
     }

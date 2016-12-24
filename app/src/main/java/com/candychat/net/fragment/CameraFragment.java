@@ -1,4 +1,4 @@
-package com.candychat.net.fragment.sub;
+package com.candychat.net.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;

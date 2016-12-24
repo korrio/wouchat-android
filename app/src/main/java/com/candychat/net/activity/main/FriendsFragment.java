@@ -745,7 +745,7 @@ public class FriendsFragment extends BaseFragment {
                     listDataHeader.add("Recently add you " + relations.getFavorite().size());
                     listDataHeader.add("Friends " + relations.getFriends().size());
 
-
+                    Log.e("getFriends",relations.getFriends().size()+"");
                     listAdapter = new ExpandableListViewAdapter(getActivity(), listDataHeader, relations);
                     expListView.setAdapter(listAdapter);
                     listAdapter.notifyDataSetChanged();
